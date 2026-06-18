@@ -8,7 +8,8 @@
 import json, os, re, shutil, glob
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-SITE = os.path.join(ROOT, "site")
+# GitHub Pages 只接受 / 或 /docs 作为发布目录，这里用 docs/
+SITE = os.path.join(ROOT, "docs")
 LEDGER = os.path.join(ROOT, "data", "ledger.json")
 REPORTS = os.path.join(ROOT, "reports")
 
