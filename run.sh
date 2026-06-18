@@ -34,5 +34,22 @@ else
   echo "⚠ 未找到日报 HTML 或 browse，跳过截图: $HTML" >> "$LOG"
 fi
 
+# 3) 重新生成网站（读最新账本+历史日报 → docs/）。
+python3 "$SCOUT_DIR/build_site.py" >> "$LOG" 2>&1 && echo "已重建网站 docs/" >> "$LOG"
+
+# 4) 提交并推送到 GitHub，触发 Pages 自动发布。
+cd "$SCOUT_DIR"
+git add -A >> "$LOG" 2>&1
+if ! git diff --cached --quiet; then
+  git commit -q -m "每日更新：$TODAY 日报" >> "$LOG" 2>&1
+  if git push -q origin main >> "$LOG" 2>&1; then
+    echo "✅ 已推送到 GitHub，网站将自动更新" >> "$LOG"
+  else
+    echo "⚠ git push 失败（可能需要重新认证 gh / 网络问题），日报已生成在本地" >> "$LOG"
+  fi
+else
+  echo "今日无改动，跳过提交" >> "$LOG"
+fi
+
 echo "===== 完成 $(date '+%Y-%m-%d %H:%M:%S') =====" >> "$LOG"
 echo "" >> "$LOG"
