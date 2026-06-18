@@ -1,0 +1,19 @@
+# 系统/编辑器
+.DS_Store
+.gstack/
+
+# 运行日志（每天会变大，不入库）
+cron.log
+launchd.out.log
+launchd.err.log
+
+# 推广稿源文件与大文件（不属于网站，单独保管）
+世界杯AI球探_推广稿.docx
+文章成品.html
+文章初稿.md
+文章初稿-图文版.md
+article-images/
+screenshots/
+
+# Kimi Code 跑出来的一次性辅助脚本
+_md2html.py
