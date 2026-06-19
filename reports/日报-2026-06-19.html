@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界杯 AI 球探日报</title>
+<style>
+  :root{
+    --bg:#080c11; --card:#111922; --card2:#0e151d; --line:#1d2935; --ink:#e9f0f7;
+    --muted:#7d8b9c; --accent:#22d3a8; --accent2:#3ba3ff;
+    --warn:#ffb454; --danger:#ff5d6c; --win:#22d3a8; --draw:#8b95a3; --lose:#ff7a45;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(1200px 600px at 50% -10%,#0e1a16 0%,var(--bg) 55%);
+    color:var(--ink);font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    line-height:1.55;padding:22px;max-width:600px;margin:0 auto}
+
+  /* 顶栏 */
+  .top{display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:16px}
+  .top h1{font-size:21px;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+  .top .tag{font-size:10px;color:var(--accent);border:1px solid var(--accent);
+    border-radius:4px;padding:1px 6px;font-weight:600}
+  .top .meta{color:var(--muted);font-size:12px;text-align:right}
+
+  /* 记分牌 */
+  .scoreboard{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px}
+  .sb{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 6px;text-align:center}
+  .sb.lead{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+  .sb .who{font-size:10.5px;color:var(--muted);margin-bottom:3px}
+  .sb .rec{font-size:15px;font-weight:800}
+  .sb .rate{font-size:10.5px;color:var(--accent)}
+  .ticker{font-size:11px;color:var(--muted);text-align:center;margin-bottom:18px}
+
+  h2{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;
+    margin:22px 0 10px;display:flex;align-items:center;gap:8px}
+  h2::before{content:"";width:3px;height:13px;background:var(--accent);border-radius:2px}
+
+  /* 复盘 */
+  .recap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .recap .row{display:flex;justify-content:space-between;padding:9px 13px;border-bottom:1px solid var(--line);font-size:13.5px}
+  .recap .row:last-child{border-bottom:none}
+  .recap .sc{font-variant-numeric:tabular-nums;color:#cdd9e5}
+  .hit{color:var(--win)} .miss{color:var(--danger)}
+
+  /* 比赛卡片 */
+  .match{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
+    border-radius:13px;padding:14px;margin-bottom:11px}
+  .match .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .match .vs{font-size:16px;font-weight:800}
+  .match .grp{font-size:10px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 5px;margin-left:6px}
+  .match .time{font-size:12px;color:var(--accent2);font-variant-numeric:tabular-nums}
+  .match .stat{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:#bcc9d6;margin:4px 0 8px}
+  .match .stat b{color:var(--ink)}
+  .moon{letter-spacing:1px}
+  .match .take{font-size:12.5px;color:#cdd9e5;border-left:2px solid var(--accent);padding-left:8px;margin-top:6px}
+
+  /* 五人投票条 */
+  .votes{display:flex;gap:4px;margin-top:9px}
+  .vote{flex:1;text-align:center;font-size:9.5px;border-radius:6px;padding:5px 2px;border:1px solid var(--line)}
+  .vote .r{color:var(--muted);display:block;font-size:9px;margin-bottom:2px}
+  .vote .v{font-weight:700}
+  .vote.win{background:rgba(34,211,168,.12);border-color:rgba(34,211,168,.4)}
+  .vote.win .v{color:var(--win)}
+  .vote.draw{background:rgba(139,149,163,.12)} .vote.draw .v{color:var(--draw)}
+  .vote.lose{background:rgba(255,122,69,.12);border-color:rgba(255,122,69,.35)} .vote.lose .v{color:var(--lose)}
+  .split{font-size:10px;color:var(--warn);margin-top:6px}
+
+  /* 五人会诊面板 */
+  .panel{background:#0c1712;border:1px solid #1b3a2c;border-radius:12px;padding:13px;margin-bottom:11px}
+  .panel .role{display:flex;gap:9px;font-size:12.5px;margin:7px 0;align-items:baseline}
+  .panel .role b{color:var(--accent);min-width:74px;display:inline-block;flex-shrink:0}
+  .panel .role span{color:#cdd9e5}
+
+  /* 读图块 */
+  .vision{background:var(--card);border:1px dashed var(--accent2);border-radius:12px;padding:13px;margin-bottom:11px;font-size:12.5px;color:#cdd9e5}
+  .vision .lab{color:var(--accent2);font-weight:700;margin-bottom:5px;font-size:11px}
+
+  /* 站队 */
+  .pick{background:linear-gradient(135deg,#11241d,#0e2a33);border:1px solid var(--accent);
+    border-radius:13px;padding:16px;text-align:center;margin:8px 0}
+  .pick .label{font-size:11px;color:var(--muted)}
+  .pick .team{font-size:24px;font-weight:800;color:var(--accent);margin:4px 0}
+  .pick .why{font-size:12px;color:#cdd9e5}
+
+  footer{margin-top:24px;padding-top:14px;border-top:1px solid var(--line);
+    font-size:10.5px;color:var(--muted);text-align:center;line-height:1.9}
+  footer .disc{color:#5f6c7b}
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+
+  <div class="top">
+    <h1>⚽ AI 球探日报 <span class="tag">KIMI CODE 自动生成</span></h1>
+    <div class="meta">第 5 期<br>06月19日</div>
+  </div>
+
+  <div class="scoreboard">
+    <div class="sb "><div class="who">我的小分队</div><div class="rec">12胜8负</div><div class="rate">60.0%</div></div>
+    <div class="sb "><div class="who">Kimi官方</div><div class="rec">0胜0负</div><div class="rate">N/A</div></div>
+    <div class="sb lead"><div class="who">Opta超算</div><div class="rec">10胜4负</div><div class="rate">71.4%</div></div>
+    <div class="sb"><div class="who">抛硬币</div><div class="rec">6胜14负</div><div class="rate">30.0%</div></div>
+  </div>
+  <div class="ticker">截至 2026-06-19 · 我的小分队 60.0% · Opta 71.4% · 抛硬币 30.0%</div>
+
+  <h2>昨夜复盘</h2>
+  <div class="recap">
+    <div class="row"><span class="sc">葡萄牙 1-1 刚果（金）</span><span>小分队 <span class="miss">❌</span> · 抛硬币 <span class="miss">❌</span></span></div>
+<div class="row"><span class="sc">英格兰 4-2 克罗地亚</span><span>小分队 <span class="hit">✅</span> · Opta <span class="hit">✅</span> · 抛硬币 <span class="miss">❌</span></span></div>
+<div class="row"><span class="sc">加纳 1-0 巴拿马</span><span>小分队 <span class="miss">❌</span> · 抛硬币 <span class="miss">❌</span></span></div>
+<div class="row"><span class="sc">乌兹别克斯坦 1-3 哥伦比亚</span><span>小分队 <span class="hit">✅</span> · Opta <span class="hit">✅</span> · 抛硬币 <span class="miss">❌</span></span></div>
+    <!-- <div class="row"><span class="sc">德国 2-1 库拉索</span><span class="hit">小分队 ✅ · Opta ✅</span></div> -->
+  </div>
+
+  <h2>今日焦点 · 北京时间</h2>
+  <div class="match">
+  <div class="head">
+    <span class="vs">捷克 vs 南非<span class="grp">A组</span></span>
+    <span class="time">05:00</span>
+  </div>
+  <div class="stat">
+    <span><b>🌙</b><span class="moon">🌙🌙</span> 熬夜2/5</span>
+    <span>比分预测 <b>1-0</b></span>
+    <span>关键 <b>希克、绍切克（捷克）；姆韦拉、西索尔（南非）</b></span>
+  </div>
+  <div class="take"> loser几乎出局：捷克能否用欧洲经验碾压残阵南非？</div>
+  <div class="votes">
+    <div class="vote win"><span class="r">数据</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">战术</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">伤病</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">舆情</span><span class="v">主</span></div>
+    <div class="vote draw"><span class="r">风险官</span><span class="v">平</span></div>
+  </div>
+  <div class="split">⚠ 五人有分歧：风险官唱反调</div>
+</div>
+<div class="match">
+  <div class="head">
+    <span class="vs">瑞士 vs 波黑<span class="grp">B组</span></span>
+    <span class="time">08:00</span>
+  </div>
+  <div class="stat">
+    <span><b>🌙</b><span class="moon">🌙</span> 熬夜1/5</span>
+    <span>比分预测 <b>1-0</b></span>
+    <span>关键 <b>恩博洛、扎卡、阿坎吉（瑞士）；哲科、德米罗维奇（波黑）</b></span>
+  </div>
+  <div class="take">B组全平之后的六分战：瑞士经验能否敲开波黑铁桶？</div>
+  <div class="votes">
+    <div class="vote win"><span class="r">数据</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">战术</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">伤病</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">舆情</span><span class="v">主</span></div>
+    <div class="vote draw"><span class="r">风险官</span><span class="v">平</span></div>
+  </div>
+  <div class="split">⚠ 五人有分歧：风险官唱反调</div>
+</div>
+<div class="match">
+  <div class="head">
+    <span class="vs">加拿大 vs 卡塔尔<span class="grp">B组</span></span>
+    <span class="time">11:00</span>
+  </div>
+  <div class="stat">
+    <span><b>🌙</b><span class="moon">🌙🌙🌙</span> 熬夜3/5</span>
+    <span>比分预测 <b>2-0</b></span>
+    <span>关键 <b>戴维斯、戴维（加拿大）；阿菲夫、阿里（卡塔尔）</b></span>
+  </div>
+  <div class="take">东道主冲击世界杯首胜，卡塔尔高位防线能否顶住加拿大速度？</div>
+  <div class="votes">
+    <div class="vote win"><span class="r">数据</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">战术</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">伤病</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">舆情</span><span class="v">主</span></div>
+    <div class="vote draw"><span class="r">风险官</span><span class="v">平</span></div>
+  </div>
+  <div class="split">⚠ 五人有分歧：风险官唱反调</div>
+</div>
+<div class="match">
+  <div class="head">
+    <span class="vs">墨西哥 vs 韩国<span class="grp">A组</span></span>
+    <span class="time">14:00</span>
+  </div>
+  <div class="stat">
+    <span><b>🌙</b><span class="moon">🌙🌙🌙🌙</span> 熬夜4/5</span>
+    <span>比分预测 <b>2-1</b></span>
+    <span>关键 <b>吉梅内斯、阿尔瓦雷斯（墨西哥）；孙兴慜、李刚仁（韩国）</b></span>
+  </div>
+  <div class="take">小组头名之争：墨西哥东道主加持 vs 韩国亚洲反击风暴</div>
+  <div class="votes">
+    <div class="vote win"><span class="r">数据</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">战术</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">伤病</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">舆情</span><span class="v">主</span></div>
+    <div class="vote lose"><span class="r">风险官</span><span class="v">客</span></div>
+  </div>
+  <div class="split">⚠ 五人有分歧：风险官唱反调</div>
+</div>
+  <!-- 每张卡片范例：
+  <div class="match">
+    <div class="head">
+      <span class="vs">荷兰 vs 日本<span class="grp">F组</span></span>
+      <span class="time">06/15 04:00</span>
+    </div>
+    <div class="stat">
+      <span><b>🌙</b><span class="moon">🌙🌙🌙</span> 熬夜4/5</span>
+      <span>比分预测 <b>2-1</b></span>
+      <span>关键 <b>加克波 / 久保建英</b></span>
+    </div>
+    <div class="take">荷兰整体实力占优，但日本反击犀利，看点在中场绞杀。</div>
+    <div class="votes">
+      <div class="vote win"><span class="r">数据</span><span class="v">荷</span></div>
+      <div class="vote win"><span class="r">战术</span><span class="v">荷</span></div>
+      <div class="vote draw"><span class="r">伤病</span><span class="v">平</span></div>
+      <div class="vote win"><span class="r">舆情</span><span class="v">荷</span></div>
+      <div class="vote lose"><span class="r">风险官</span><span class="v">日</span></div>
+    </div>
+    <div class="split">⚠ 五人有分歧：风险官看冷</div>
+  </div>
+  -->
+
+  <h2>五人会诊摘要</h2>
+  <div class="panel">
+    <div class="role"><b>数据分析师</b><span>四场全部看主队胜，信心梯度：瑞士/加拿大 > 捷克 > 墨西哥；依据 Opta 概率、赔率隐含胜率与 FIFA 排名。</span></div>
+    <div class="role"><b>战术分析师</b><span>四场均看主胜：强调南非双核停赛、波黑进攻依赖 Džeko、加拿大场面压制、墨西哥主场但 Montes 停赛存隐患。</span></div>
+    <div class="role"><b>伤病观察员</b><span>四场均看主胜；南非 Sithole/Zwane 停赛、波黑 Džeko/Kolašinac 状态待确认、加拿大 Davies 复出、墨西哥 Montes 停赛被过度放大。</span></div>
+    <div class="role"><b>舆情嘴替</b><span>舆论前三场一边倒站主胜，墨西哥 vs 韩国分歧最大；提醒‘东道主并非稳赢’与亚洲队北美适应佳。</span></div>
+    <div class="role"><b>风险官</b><span>三平一客胜唱反调：捷克/瑞士/加拿大看平，墨西哥看韩国爆冷；给出 35-50% 翻车概率作为反向基准。</span></div>
+  </div>
+
+  <h2>📷 今日读图</h2>
+  <div class="vision">
+    <div class="lab">视觉理解（Kimi 模型本体能力）</div>
+    我读了错题本，本次继续注意「豪门/热门偏紧」「亚洲/非洲球队低位防守+反击在北美有效」「东道主并非稳赢」三条教训。<br><br><code>assets/世界杯赛程截图.png</code> 为 ESPN FIFA World Cup Schedule 截图：<br>• 昨夜已赛（当地时间 6/17）：英格兰 3-2 克罗地亚、阿根廷 3-0 阿尔及利亚、奥地利 3-1 约旦、葡萄牙 1-1 刚果（金）。<br>• 今日待赛/已赛（北京时间 6/19）：捷克 05:00、瑞士 08:00、加拿大 11:00、墨西哥 14:00。<br>• 后续信号：北美高温与人工草皮继续压缩欧洲/南美热门的表现空间；下轮东道主美国与巴西等队需警惕。
+  </div>
+
+  <h2>今日建议站队</h2>
+  <div class="pick">
+    <div class="label">去 Kimi Token Cup 支持</div>
+    <div class="team">加拿大</div>
+    <div class="why">五人会诊四票主胜，Opta 超算给加拿大 72.9% 胜率；东道主在温哥华主场近 4 战全胜进 17 失 2，卡塔尔首战被瑞士射 26 脚防守承压。</div>
+  </div>
+
+  <footer>
+    数据更新：2026-06-19 15:00 北京 · 各场来源已在 ledger.json 留痕<br>
+    <span class="disc">仅供娱乐与 AI 能力测评，不构成任何投注建议。</span><br>
+    由 Kimi Code 自动生成 · <a href="https://kimi.com/code">kimi.com/code</a>
+  </footer>
+
+</body>
+</html>
