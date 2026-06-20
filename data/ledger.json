@@ -12,32 +12,39 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 12,
-      "miss": 8
+      "hit": 15,
+      "miss": 9
     },
     "kimi_official": {
       "hit": 0,
       "miss": 0
     },
     "opta": {
-      "hit": 10,
-      "miss": 4
+      "hit": 13,
+      "miss": 5
     },
     "coin_flip": {
-      "hit": 6,
-      "miss": 14
+      "hit": 8,
+      "miss": 16
     }
   },
   "token_account": {
-    "supported_team_history": [],
+    "supported_team_history": [
+      {
+        "date": "2026-06-19",
+        "match": "加拿大 vs 卡塔尔",
+        "team": "加拿大",
+        "status": "hit"
+      }
+    ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-06-19",
-      "match": "加拿大 vs 卡塔尔",
-      "team": "加拿大",
-      "status": "hit"
+      "date": "2026-06-20",
+      "match": "苏格兰 vs 摩洛哥",
+      "team": "摩洛哥",
+      "status": "pending"
     }
   },
   "matches": [
@@ -840,6 +847,130 @@
         "kimi_official": "n/a",
         "coin_flip": "hit"
       }
+    },
+    {
+      "date": "2026-06-19",
+      "home": "美国",
+      "away": "澳大利亚",
+      "group": "D",
+      "beijing_time": "06/20 03:00",
+      "beijing_date": "2026-06-20",
+      "status": "scheduled",
+      "source": "https://www.beforeyoubet.com.au/world-cup-2026-day-9-predictions-betting-tips-saturday-june-20",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "平",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "客队胜"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "2-1（三票主胜、一票平、一票客胜；东道主热门但数据端不应追大胜）",
+      "key_players": "普利西奇、巴洛贡（美国）；伊兰昆达、马修·瑞恩（澳大利亚）",
+      "recent_form": "美国首战4-1巴拉圭；澳大利亚首战2-0土耳其",
+      "stay_up_index": 5,
+      "one_liner": "东道主小组头名之争，普利西奇带伤能否撕开袋鼠低位铁桶？"
+    },
+    {
+      "date": "2026-06-19",
+      "home": "苏格兰",
+      "away": "摩洛哥",
+      "group": "C",
+      "beijing_time": "06/20 06:00",
+      "beijing_date": "2026-06-20",
+      "status": "scheduled",
+      "source": "https://www.beforeyoubet.com.au/world-cup-2026-day-9-predictions-betting-tips-saturday-june-20",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "客队胜",
+            "风险官": "平"
+          },
+          "final": "客队胜",
+          "split": false
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "0-2（四票客队胜；摩洛哥结构与排名全面占优，苏格兰缺吉尔莫）",
+      "key_players": "麦克金、罗伯逊（苏格兰）；阿什拉夫、齐耶赫（摩洛哥）",
+      "recent_form": "苏格兰首战1-0海地；摩洛哥首战1-1巴西",
+      "stay_up_index": 4,
+      "one_liner": "阿特拉斯雄狮低温碾压？苏格兰缺吉尔莫后防线承压"
+    },
+    {
+      "date": "2026-06-19",
+      "home": "巴西",
+      "away": "海地",
+      "group": "C",
+      "beijing_time": "06/20 08:30",
+      "beijing_date": "2026-06-20",
+      "status": "scheduled",
+      "source": "https://www.beforeyoubet.com.au/world-cup-2026-day-9-predictions-betting-tips-saturday-june-20",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": false
+        },
+        "opta": "巴西 87.3% / 海地 4.3%（Opta/The Analyst）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "2-0（四票主胜；实力差极大但破密集与高温可能收敛比分）",
+      "key_players": "维尼修斯、拉菲尼亚（巴西）；纳宗、伊西多尔（海地）",
+      "recent_form": "巴西首战1-1摩洛哥；海地首战0-1苏格兰",
+      "stay_up_index": 3,
+      "one_liner": "桑巴军团次轮必须拿三分，海地大巴能顶多久？"
+    },
+    {
+      "date": "2026-06-19",
+      "home": "土耳其",
+      "away": "巴拉圭",
+      "group": "D",
+      "beijing_time": "06/20 11:00",
+      "beijing_date": "2026-06-20",
+      "status": "scheduled",
+      "source": "https://www.beforeyoubet.com.au/world-cup-2026-day-9-predictions-betting-tips-saturday-june-20",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "客队胜"
+          },
+          "final": "主队胜",
+          "split": false
+        },
+        "opta": "土耳其 48.4% / 巴拉圭 25.5% / 平 26.0%（Opta/The Analyst）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "2-0（四票主胜；土耳其围攻但终结效率存疑，巴拉圭背水一战）",
+      "key_players": "恰尔汗奥卢、居莱尔（土耳其）；恩西索、阿尔米隆（巴拉圭）",
+      "recent_form": "土耳其首战0-2澳大利亚但30射占优；巴拉圭首战1-4美国",
+      "stay_up_index": 1,
+      "one_liner": "两队首战皆墨的背水一战，土耳其30射转化不了的问题能否解决？"
     }
   ]
 }
