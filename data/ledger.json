@@ -12,20 +12,20 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 15,
-      "miss": 9
+      "hit": 18,
+      "miss": 10
     },
     "kimi_official": {
       "hit": 0,
       "miss": 0
     },
     "opta": {
-      "hit": 13,
-      "miss": 5
+      "hit": 14,
+      "miss": 6
     },
     "coin_flip": {
-      "hit": 8,
-      "miss": 16
+      "hit": 10,
+      "miss": 18
     }
   },
   "token_account": {
@@ -35,15 +35,21 @@
         "match": "加拿大 vs 卡塔尔",
         "team": "加拿大",
         "status": "hit"
+      },
+      {
+        "date": "2026-06-20",
+        "match": "苏格兰 vs 摩洛哥",
+        "team": "摩洛哥",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-06-20",
-      "match": "苏格兰 vs 摩洛哥",
-      "team": "摩洛哥",
+      "date": "2026-06-21",
+      "match": "西班牙 vs 沙特阿拉伯",
+      "team": "西班牙",
       "status": "pending"
     }
   },
@@ -855,8 +861,8 @@
       "group": "D",
       "beijing_time": "06/20 03:00",
       "beijing_date": "2026-06-20",
-      "status": "scheduled",
-      "source": "https://www.beforeyoubet.com.au/world-cup-2026-day-9-predictions-betting-tips-saturday-june-20",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -877,7 +883,14 @@
       "key_players": "普利西奇、巴洛贡（美国）；伊兰昆达、马修·瑞恩（澳大利亚）",
       "recent_form": "美国首战4-1巴拉圭；澳大利亚首战2-0土耳其",
       "stay_up_index": 5,
-      "one_liner": "东道主小组头名之争，普利西奇带伤能否撕开袋鼠低位铁桶？"
+      "one_liner": "东道主小组头名之争，普利西奇带伤能否撕开袋鼠低位铁桶？",
+      "score": "2-0",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
     },
     {
       "date": "2026-06-19",
@@ -886,8 +899,8 @@
       "group": "C",
       "beijing_time": "06/20 06:00",
       "beijing_date": "2026-06-20",
-      "status": "scheduled",
-      "source": "https://www.beforeyoubet.com.au/world-cup-2026-day-9-predictions-betting-tips-saturday-june-20",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -908,7 +921,14 @@
       "key_players": "麦克金、罗伯逊（苏格兰）；阿什拉夫、齐耶赫（摩洛哥）",
       "recent_form": "苏格兰首战1-0海地；摩洛哥首战1-1巴西",
       "stay_up_index": 4,
-      "one_liner": "阿特拉斯雄狮低温碾压？苏格兰缺吉尔莫后防线承压"
+      "one_liner": "阿特拉斯雄狮低温碾压？苏格兰缺吉尔莫后防线承压",
+      "score": "0-1",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
     },
     {
       "date": "2026-06-19",
@@ -917,8 +937,8 @@
       "group": "C",
       "beijing_time": "06/20 08:30",
       "beijing_date": "2026-06-20",
-      "status": "scheduled",
-      "source": "https://www.beforeyoubet.com.au/world-cup-2026-day-9-predictions-betting-tips-saturday-june-20",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -939,7 +959,14 @@
       "key_players": "维尼修斯、拉菲尼亚（巴西）；纳宗、伊西多尔（海地）",
       "recent_form": "巴西首战1-1摩洛哥；海地首战0-1苏格兰",
       "stay_up_index": 3,
-      "one_liner": "桑巴军团次轮必须拿三分，海地大巴能顶多久？"
+      "one_liner": "桑巴军团次轮必须拿三分，海地大巴能顶多久？",
+      "score": "3-0",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
     },
     {
       "date": "2026-06-19",
@@ -948,8 +975,8 @@
       "group": "D",
       "beijing_time": "06/20 11:00",
       "beijing_date": "2026-06-20",
-      "status": "scheduled",
-      "source": "https://www.beforeyoubet.com.au/world-cup-2026-day-9-predictions-betting-tips-saturday-june-20",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -970,7 +997,110 @@
       "key_players": "恰尔汗奥卢、居莱尔（土耳其）；恩西索、阿尔米隆（巴拉圭）",
       "recent_form": "土耳其首战0-2澳大利亚但30射占优；巴拉圭首战1-4美国",
       "stay_up_index": 1,
-      "one_liner": "两队首战皆墨的背水一战，土耳其30射转化不了的问题能否解决？"
+      "one_liner": "两队首战皆墨的背水一战，土耳其30射转化不了的问题能否解决？",
+      "score": "0-1",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "miss",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "home": "荷兰",
+      "away": "瑞典",
+      "score": "5-1",
+      "group": "F",
+      "beijing_time": "06/21 01:00",
+      "beijing_date": "2026-06-21",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "note": "赛后复盘，无赛前投票"
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "待确认"
+      },
+      "score_pred": "5-1（赛果）",
+      "key_players": "布罗贝伊、加克波（荷兰）；伊萨克、哲凯赖什（瑞典）",
+      "recent_form": "荷兰首战2-2日本；瑞典首战5-1突尼斯",
+      "stay_up_index": 5,
+      "one_liner": "荷兰火力全开五球回血，瑞典后防高位线被反击打穿"
+    },
+    {
+      "date": "2026-06-20",
+      "home": "德国",
+      "away": "科特迪瓦",
+      "score": "2-1",
+      "group": "E",
+      "beijing_time": "06/21 04:00",
+      "beijing_date": "2026-06-21",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "note": "赛后复盘，无赛前投票"
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "待确认"
+      },
+      "score_pred": "2-1（赛果）",
+      "key_players": "翁达夫、穆西亚拉（德国）；凯西、阿马德·迪亚洛（科特迪瓦）",
+      "recent_form": "德国首战7-1库拉索；科特迪瓦首战1-0厄瓜多尔",
+      "stay_up_index": 4,
+      "one_liner": "德国下半场连扳两球，翁达夫双响助日耳曼拿下小组关键战"
+    },
+    {
+      "date": "2026-06-20",
+      "home": "厄瓜多尔",
+      "away": "库拉索",
+      "score": "0-0",
+      "group": "E",
+      "beijing_time": "06/21 08:00",
+      "beijing_date": "2026-06-21",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "note": "赛后复盘，无赛前投票"
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "待确认"
+      },
+      "score_pred": "0-0（赛果）",
+      "key_players": "恩纳·瓦伦西亚、凯塞多（厄瓜多尔）；埃洛伊·罗姆、钟塔西（库拉索）",
+      "recent_form": "厄瓜多尔首战0-1科特迪瓦；库拉索首战1-7德国",
+      "stay_up_index": 2,
+      "one_liner": "厄瓜多尔27射+库拉索门将13次扑救，世界杯新军再拿历史第一分"
+    },
+    {
+      "date": "2026-06-20",
+      "home": "突尼斯",
+      "away": "日本",
+      "score": "0-4",
+      "group": "F",
+      "beijing_time": "06/21 12:00",
+      "beijing_date": "2026-06-21",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "note": "赛后复盘，无赛前投票"
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "待确认"
+      },
+      "score_pred": "0-4（赛果）",
+      "key_players": "上田绮世、镰田大地（日本）；汉尼拔·梅布里、塔勒比（突尼斯）",
+      "recent_form": "突尼斯首战1-5瑞典；日本首战2-2荷兰",
+      "stay_up_index": 1,
+      "one_liner": "日本20分钟内两球定调，上田绮世梅开二度送突尼斯出局边缘"
     }
   ]
 }
