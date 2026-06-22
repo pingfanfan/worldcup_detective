@@ -12,20 +12,20 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 18,
-      "miss": 10
+      "hit": 20,
+      "miss": 12
     },
     "kimi_official": {
       "hit": 0,
       "miss": 0
     },
     "opta": {
-      "hit": 14,
-      "miss": 6
+      "hit": 16,
+      "miss": 8
     },
     "coin_flip": {
-      "hit": 10,
-      "miss": 18
+      "hit": 13,
+      "miss": 19
     }
   },
   "token_account": {
@@ -41,15 +41,21 @@
         "match": "苏格兰 vs 摩洛哥",
         "team": "摩洛哥",
         "status": "hit"
+      },
+      {
+        "date": "2026-06-21",
+        "match": "西班牙 vs 沙特阿拉伯",
+        "team": "西班牙",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-06-21",
-      "match": "西班牙 vs 沙特阿拉伯",
-      "team": "西班牙",
+      "date": "2026-06-22",
+      "match": "法国 vs 伊拉克",
+      "team": "法国",
       "status": "pending"
     }
   },
@@ -1101,6 +1107,158 @@
       "recent_form": "突尼斯首战1-5瑞典；日本首战2-2荷兰",
       "stay_up_index": 1,
       "one_liner": "日本20分钟内两球定调，上田绮世梅开二度送突尼斯出局边缘"
+    },
+    {
+      "date": "2026-06-21",
+      "home": "西班牙",
+      "away": "沙特阿拉伯",
+      "score": "4-0",
+      "group": "H",
+      "beijing_time": "06/22 00:00",
+      "beijing_date": "2026-06-22",
+      "status": "finished",
+      "source": "https://www.foxsports.com/soccer/fifa-world-cup-men-spain-vs-saudi-arabia-jun-21-2026-game-boxscore-647652",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "西班牙 87.4% / 平 8.8% / 沙特阿拉伯 3.8%（Opta/The Analyst）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "3-0（数据看西班牙 xG 2.20–0.90 占优，风险官提醒防闷平）",
+      "key_players": "亚马尔、奥亚萨瓦尔（西班牙）；奥韦斯、阿尔道萨里（沙特阿拉伯）",
+      "recent_form": "西班牙首轮 0-0 佛得角但 27 射/74% 控球；沙特首轮 1-1 乌拉圭",
+      "stay_up_index": 5,
+      "one_liner": "亚马尔首发+奥亚萨瓦尔双响，西班牙用 4-0 反弹回应冷门质疑",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-06-21",
+      "home": "比利时",
+      "away": "伊朗",
+      "score": "0-0",
+      "group": "G",
+      "beijing_time": "06/22 03:00",
+      "beijing_date": "2026-06-22",
+      "status": "finished",
+      "source": "https://www.foxsports.com/soccer/fifa-world-cup-men-belgium-vs-iran-jun-21-2026-game-boxscore-647653",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "比利时 67.5% / 平 19.3% / 伊朗 13.2%（Opta/The Analyst）",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "1-0（比利时终结效率偏低，数据端仍看小胜）",
+      "key_players": "德布劳内、卢卡库（比利时）；雷扎伊安、塔雷米（伊朗）",
+      "recent_form": "比利时首轮 1-1 埃及；伊朗首轮 2-2 新西兰",
+      "stay_up_index": 4,
+      "one_liner": "比利时 10 人应战仍闷平伊朗，欧洲红魔连续 4 场世界杯不胜",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "miss",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-06-21",
+      "home": "乌拉圭",
+      "away": "佛得角",
+      "score": "2-2",
+      "group": "H",
+      "beijing_time": "06/22 06:00",
+      "beijing_date": "2026-06-22",
+      "status": "finished",
+      "source": "https://www.foxsports.com/soccer/fifa-world-cup-men-uruguay-vs-cape-verde-jun-21-2026-game-boxscore-647654",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "乌拉圭 67.2% / 平 20.6% / 佛得角 12.2%（Opta/The Analyst）",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "1-0（乌拉圭首轮 27 射仅 1 球，仍看小胜；风险官押平）",
+      "key_players": "努涅斯、巴尔韦德（乌拉圭）；沃济尼亚、瑞恩·门德斯（佛得角）",
+      "recent_form": "乌拉圭首轮 1-1 沙特阿拉伯；佛得角首轮 0-0 西班牙",
+      "stay_up_index": 3,
+      "one_liner": "佛得角再演门神剧本，乌拉圭 2-2 被逼平错失出线主动",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "miss",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-06-21",
+      "home": "新西兰",
+      "away": "埃及",
+      "score": "1-3",
+      "group": "G",
+      "beijing_time": "06/22 09:00",
+      "beijing_date": "2026-06-22",
+      "status": "finished",
+      "source": "https://www.foxsports.com/soccer/fifa-world-cup-men-new-zealand-vs-egypt-jun-21-2026-game-boxscore-647655",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "平",
+            "风险官": "主队胜"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "埃及 59.6% / 平 22.7% / 新西兰 17.7%（Opta/The Analyst）",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "2-0（埃及 xG 1.60 vs 0.50 领先；风险官押新西兰爆冷）",
+      "key_players": "萨拉赫、马尔穆什（埃及）；克里斯·伍德、伊莱贾·贾斯特（新西兰）",
+      "recent_form": "新西兰首轮 2-2 伊朗；埃及首轮 1-1 比利时",
+      "stay_up_index": 2,
+      "one_liner": "萨拉赫传射+马尔穆什建功，埃及 3-1 拿下队史世界杯首胜",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
     }
   ]
 }
