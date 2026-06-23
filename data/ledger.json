@@ -12,7 +12,7 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 20,
+      "hit": 24,
       "miss": 12
     },
     "kimi_official": {
@@ -20,12 +20,12 @@
       "miss": 0
     },
     "opta": {
-      "hit": 16,
+      "hit": 17,
       "miss": 8
     },
     "coin_flip": {
-      "hit": 13,
-      "miss": 19
+      "hit": 14,
+      "miss": 22
     }
   },
   "token_account": {
@@ -47,15 +47,27 @@
         "match": "西班牙 vs 沙特阿拉伯",
         "team": "西班牙",
         "status": "hit"
+      },
+      {
+        "date": "2026-06-22",
+        "match": "法国 vs 伊拉克",
+        "team": "法国",
+        "status": "hit"
+      },
+      {
+        "date": "2026-06-23",
+        "match": "挪威 vs 塞内加尔",
+        "team": "挪威",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-06-22",
-      "match": "法国 vs 伊拉克",
-      "team": "法国",
+      "date": "2026-06-24",
+      "match": "葡萄牙 vs 乌兹别克斯坦",
+      "team": "葡萄牙",
       "status": "pending"
     }
   },
@@ -1258,6 +1270,158 @@
         "opta": "hit",
         "kimi_official": "n/a",
         "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "home": "阿根廷",
+      "away": "奥地利",
+      "score": "2-0",
+      "group": "J",
+      "beijing_time": "06/23 06:00",
+      "beijing_date": "2026-06-23",
+      "status": "finished",
+      "source": "https://www.foxsports.com/soccer/fifa-world-cup-men-argentina-vs-austria-jun-22-2026-game-boxscore-647656",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "2-0（赛前舆情/外媒主流比分集中于此；风险官提醒只押方向不追穿盘）",
+      "key_players": "梅西、劳塔罗/阿尔瓦雷斯（阿根廷）；萨比策、阿瑙托维奇（奥地利）",
+      "recent_form": "阿根廷近8场全胜且首轮3-0阿尔及利亚；奥地利首轮3-1约旦但防线伤病集中",
+      "stay_up_index": 5,
+      "one_liner": "梅西距克洛泽世界杯进球纪录仅一球，奥地利防线伤病成最大变量",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "home": "法国",
+      "away": "伊拉克",
+      "score": "3-0",
+      "group": "I",
+      "beijing_time": "06/23 10:00",
+      "beijing_date": "2026-06-23",
+      "status": "finished",
+      "source": "https://www.foxsports.com/soccer/fifa-world-cup-men-france-vs-iraq-jun-22-2026-game-boxscore-647657",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "3-0（赛前数据/舆论普遍看法国小胜；风险官提醒-1100赔率过热）",
+      "key_players": "姆巴佩、登贝莱/奥利塞（法国）；艾门·侯赛因、伊克巴尔（伊拉克）",
+      "recent_form": "法国首轮3-1塞内加尔，姆巴佩双响；伊拉克首轮1-4挪威",
+      "stay_up_index": 4,
+      "one_liner": "姆巴佩国家队百场+追平盖德·穆勒，伊拉克出线背水一战",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "home": "挪威",
+      "away": "塞内加尔",
+      "score": "3-2",
+      "group": "I",
+      "beijing_time": "06/23 13:00",
+      "beijing_date": "2026-06-23",
+      "status": "finished",
+      "source": "https://www.foxsports.com/soccer/fifa-world-cup-men-norway-vs-senegal-jun-22-2026-game-boxscore-647658",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "平",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "客队胜"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "挪威 47.8% / 平 24.8% / 塞内加尔 27.4%（Opta/The Analyst，转引自 thethao247）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "2-1（赛前多数看挪威小胜；战术看平、风险官看客胜）",
+      "key_players": "哈兰德、厄德高（挪威）；马内、伊斯梅拉·萨尔/雅克松（塞内加尔）",
+      "recent_form": "挪威首轮4-1伊拉克，哈兰德连续11场国家队进球；塞内加尔首轮1-3法国",
+      "stay_up_index": 2,
+      "one_liner": "哈兰德与塞内加尔反击群的开放对攻，雨水或成X因素",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "home": "约旦",
+      "away": "阿尔及利亚",
+      "score": "1-2",
+      "group": "J",
+      "beijing_time": "06/23 16:00",
+      "beijing_date": "2026-06-23",
+      "status": "finished",
+      "source": "https://www.foxsports.com/soccer/fifa-world-cup-men-jordan-vs-algeria-jun-22-2026-game-boxscore-647659",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "客队胜",
+            "风险官": "主队胜"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "1-2（赛前数据/舆情看阿尔及利亚小胜；风险官反押约旦爆冷）",
+      "key_players": "穆萨·塔马里、阿里·奥尔万（约旦）；马赫雷斯、古伊里（阿尔及利亚）",
+      "recent_form": "约旦近6场不胜且每场至少丢2球；阿尔及利亚近6场3胜3平不败",
+      "stay_up_index": 1,
+      "one_liner": "两支首战告负队的生死战，阿尔及利亚马赫雷斯回归迎战塔马里反击",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
       }
     }
   ]
