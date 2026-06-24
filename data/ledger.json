@@ -12,20 +12,20 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 24,
-      "miss": 12
+      "hit": 21,
+      "miss": 11
     },
     "kimi_official": {
       "hit": 0,
       "miss": 0
     },
     "opta": {
-      "hit": 17,
-      "miss": 8
+      "hit": 14,
+      "miss": 7
     },
     "coin_flip": {
-      "hit": 14,
-      "miss": 22
+      "hit": 12,
+      "miss": 20
     }
   },
   "token_account": {
@@ -1423,6 +1423,130 @@
         "kimi_official": "n/a",
         "coin_flip": "miss"
       }
+    },
+    {
+      "date": "2026-06-23",
+      "home": "葡萄牙",
+      "away": "乌兹别克斯坦",
+      "group": "K",
+      "beijing_time": "06/24 01:00",
+      "beijing_date": "2026-06-24",
+      "status": "scheduled",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认（Opta/The Analyst 未查到单场概率；葡萄牙夺冠概率 7%）",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "2-0（数据/战术主流看葡萄牙小胜；风险官提醒防闷平）",
+      "key_players": "C罗、B费、B席（葡萄牙）；法伊祖拉耶夫、肖穆罗多夫（乌兹别克）",
+      "recent_form": "葡萄牙首轮1-1刚果金，近5场4胜1平；乌兹别克首轮1-3哥伦比亚，亚预赛16场仅失11球",
+      "stay_up_index": 5,
+      "one_liner": "C罗破冰之夜？乌兹别克低位铁桶能否再演冷门"
+    },
+    {
+      "date": "2026-06-23",
+      "home": "英格兰",
+      "away": "加纳",
+      "group": "L",
+      "beijing_time": "06/24 04:00",
+      "beijing_date": "2026-06-24",
+      "status": "scheduled",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认（Opta/The Analyst 未查到单场概率；英格兰夺冠概率 11.2%）",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "2-0（多数模型看英格兰小胜；风险官提醒加纳低位+反击）",
+      "key_players": "凯恩、贝林厄姆（英格兰）；帕尔特伊、塞门约（加纳）",
+      "recent_form": "英格兰首轮4-2克罗地亚，欧预赛8战全胜；加纳首轮1-0巴拿马，近5场热身1平4负",
+      "stay_up_index": 4,
+      "one_liner": "凯恩距世界杯进球纪录一步之遥，加纳帕尔特伊回归"
+    },
+    {
+      "date": "2026-06-23",
+      "home": "巴拿马",
+      "away": "克罗地亚",
+      "group": "L",
+      "beijing_time": "06/24 07:00",
+      "beijing_date": "2026-06-24",
+      "status": "scheduled",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "客队胜",
+            "风险官": "平"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "待确认（Opta/The Analyst 未查到单场概率；克罗地亚夺冠概率 1.6%）",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "1-2（克罗地亚客胜；巴拿马反击或偷一球）",
+      "key_players": "法哈多、沃特曼（巴拿马）；莫德里奇、佩里西奇、科瓦契奇（克罗地亚）",
+      "recent_form": "巴拿马首轮0-1加纳，近5场2胜1平2负；克罗地亚首轮2-4英格兰，近5场2胜3负",
+      "stay_up_index": 2,
+      "one_liner": "莫德里奇200场里程碑，生死战克罗地亚不容有失"
+    },
+    {
+      "date": "2026-06-23",
+      "home": "哥伦比亚",
+      "away": "刚果（金）",
+      "group": "K",
+      "beijing_time": "06/24 10:00",
+      "beijing_date": "2026-06-24",
+      "status": "scheduled",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "哥伦比亚 58% / 平 21% / 刚果（金） 21%（Opta/The Analyst，转引自 journalarta）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "2-1（哥伦比亚小胜；刚果金反击或进球）",
+      "key_players": "J罗、路易斯·迪亚斯、路易斯·苏亚雷斯（哥伦比亚）；维萨、巴坎布（刚果金）",
+      "recent_form": "哥伦比亚首轮3-1乌兹别克，近7场5胜；刚果金首轮1-1葡萄牙，近6场仅1胜",
+      "stay_up_index": 1,
+      "one_liner": "J罗+迪亚斯强攻非洲铁桶，维萨反击再成X因素"
     }
   ]
 }
