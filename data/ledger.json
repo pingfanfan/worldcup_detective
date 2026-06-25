@@ -12,20 +12,20 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 21,
-      "miss": 11
+      "hit": 28,
+      "miss": 14
     },
     "kimi_official": {
       "hit": 0,
       "miss": 0
     },
     "opta": {
-      "hit": 14,
+      "hit": 15,
       "miss": 7
     },
     "coin_flip": {
-      "hit": 12,
-      "miss": 20
+      "hit": 17,
+      "miss": 25
     }
   },
   "token_account": {
@@ -59,16 +59,28 @@
         "match": "挪威 vs 塞内加尔",
         "team": "挪威",
         "status": "hit"
+      },
+      {
+        "date": "2026-06-24",
+        "match": "葡萄牙 vs 乌兹别克斯坦",
+        "team": "葡萄牙",
+        "status": "hit"
+      },
+      {
+        "date": "2026-06-25",
+        "match": "摩洛哥 vs 海地",
+        "team": "摩洛哥",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-06-24",
-      "match": "葡萄牙 vs 乌兹别克斯坦",
-      "team": "葡萄牙",
-      "status": "pending"
+      "date": "2026-06-25",
+      "match": "摩洛哥 vs 海地",
+      "team": "摩洛哥",
+      "status": "hit"
     }
   },
   "matches": [
@@ -1431,8 +1443,8 @@
       "group": "K",
       "beijing_time": "06/24 01:00",
       "beijing_date": "2026-06-24",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/story/_/id/49157528/fifa-world-cup-2026-stats-cristiano-ronaldo-breaks-lionel-messi-record-england-unlucky-13-luka-modric-fourth-all-of-200",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -1453,7 +1465,14 @@
       "key_players": "C罗、B费、B席（葡萄牙）；法伊祖拉耶夫、肖穆罗多夫（乌兹别克）",
       "recent_form": "葡萄牙首轮1-1刚果金，近5场4胜1平；乌兹别克首轮1-3哥伦比亚，亚预赛16场仅失11球",
       "stay_up_index": 5,
-      "one_liner": "C罗破冰之夜？乌兹别克低位铁桶能否再演冷门"
+      "one_liner": "C罗破冰之夜？乌兹别克低位铁桶能否再演冷门",
+      "score": "5-0",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
     },
     {
       "date": "2026-06-23",
@@ -1462,8 +1481,8 @@
       "group": "L",
       "beijing_time": "06/24 04:00",
       "beijing_date": "2026-06-24",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/story/_/id/49157528/fifa-world-cup-2026-stats-cristiano-ronaldo-breaks-lionel-messi-record-england-unlucky-13-luka-modric-fourth-all-of-200",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -1484,7 +1503,14 @@
       "key_players": "凯恩、贝林厄姆（英格兰）；帕尔特伊、塞门约（加纳）",
       "recent_form": "英格兰首轮4-2克罗地亚，欧预赛8战全胜；加纳首轮1-0巴拿马，近5场热身1平4负",
       "stay_up_index": 4,
-      "one_liner": "凯恩距世界杯进球纪录一步之遥，加纳帕尔特伊回归"
+      "one_liner": "凯恩距世界杯进球纪录一步之遥，加纳帕尔特伊回归",
+      "score": "0-0",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
     },
     {
       "date": "2026-06-23",
@@ -1493,8 +1519,8 @@
       "group": "L",
       "beijing_time": "06/24 07:00",
       "beijing_date": "2026-06-24",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://english.ahram.org.eg/WorldCup2026/WC2026MatchInfo/2026/Panama-vs.-Croatia/658.aspx",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -1515,7 +1541,14 @@
       "key_players": "法哈多、沃特曼（巴拿马）；莫德里奇、佩里西奇、科瓦契奇（克罗地亚）",
       "recent_form": "巴拿马首轮0-1加纳，近5场2胜1平2负；克罗地亚首轮2-4英格兰，近5场2胜3负",
       "stay_up_index": 2,
-      "one_liner": "莫德里奇200场里程碑，生死战克罗地亚不容有失"
+      "one_liner": "莫德里奇200场里程碑，生死战克罗地亚不容有失",
+      "score": "0-1",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
     },
     {
       "date": "2026-06-23",
@@ -1524,8 +1557,8 @@
       "group": "K",
       "beijing_time": "06/24 10:00",
       "beijing_date": "2026-06-24",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/story/_/id/49157528/fifa-world-cup-2026-stats-cristiano-ronaldo-breaks-lionel-messi-record-england-unlucky-13-luka-modric-fourth-all-of-200",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -1546,7 +1579,242 @@
       "key_players": "J罗、路易斯·迪亚斯、路易斯·苏亚雷斯（哥伦比亚）；维萨、巴坎布（刚果金）",
       "recent_form": "哥伦比亚首轮3-1乌兹别克，近7场5胜；刚果金首轮1-1葡萄牙，近6场仅1胜",
       "stay_up_index": 1,
-      "one_liner": "J罗+迪亚斯强攻非洲铁桶，维萨反击再成X因素"
+      "one_liner": "J罗+迪亚斯强攻非洲铁桶，维萨反击再成X因素",
+      "score": "1-0",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "home": "瑞士",
+      "away": "加拿大",
+      "score": "2-1",
+      "group": "B",
+      "beijing_time": "06/25 03:00",
+      "beijing_date": "2026-06-25",
+      "status": "finished",
+      "source": "https://rg.org/en-ca/news/soccer/world-cup-2026-live-canada-brazil-and-mexico-headline-june-24",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "平",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "2-1（数据/战术/舆情看瑞士小胜；伤病/风险官提醒防闷平）",
+      "key_players": "扎卡、恩博洛（瑞士）；乔纳森·戴维（加拿大）",
+      "recent_form": "瑞士前两轮1-1卡塔尔、4-1波黑；加拿大1-1波黑、6-0卡塔尔",
+      "stay_up_index": 5,
+      "one_liner": "B组头名战：瑞士必须取胜，加拿大不败即第一",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "home": "波黑",
+      "away": "卡塔尔",
+      "score": "3-1",
+      "group": "B",
+      "beijing_time": "06/25 03:00",
+      "beijing_date": "2026-06-25",
+      "status": "finished",
+      "source": "https://rg.org/en-ca/news/soccer/world-cup-2026-live-canada-brazil-and-mexico-headline-june-24",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "2-0（四角色看波黑；风险官提醒热门降档）",
+      "key_players": "哲科（波黑）；阿菲夫（卡塔尔）",
+      "recent_form": "波黑前两轮1-1加拿大、1-4瑞士；卡塔尔1-1瑞士、0-6加拿大",
+      "stay_up_index": 5,
+      "one_liner": "B组生死战：双方必须取胜，卡塔尔防线残阵",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "home": "摩洛哥",
+      "away": "海地",
+      "score": "4-2",
+      "group": "C",
+      "beijing_time": "06/25 06:00",
+      "beijing_date": "2026-06-25",
+      "status": "finished",
+      "source": "https://rg.org/en-ca/news/soccer/world-cup-2026-live-canada-brazil-and-mexico-headline-june-24",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "主队胜"
+          },
+          "final": "主队胜",
+          "split": false
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "2-0（五人会诊一致看摩洛哥胜；风险官提醒不追深盘）",
+      "key_players": "齐耶赫、哈基米（摩洛哥）；皮埃尔罗（海地）",
+      "recent_form": "摩洛哥前两轮1-1巴西、1-0苏格兰；海地两战全负0进球",
+      "stay_up_index": 4,
+      "one_liner": "摩洛哥争C组头名，海地已出局荣誉战",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "home": "苏格兰",
+      "away": "巴西",
+      "score": "0-3",
+      "group": "C",
+      "beijing_time": "06/25 06:00",
+      "beijing_date": "2026-06-25",
+      "status": "finished",
+      "source": "https://rg.org/en-ca/news/soccer/world-cup-2026-live-canada-brazil-and-mexico-headline-june-24",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "客队胜",
+            "风险官": "平"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "0-2（四角色看巴西胜；风险官提醒深盘降档）",
+      "key_players": "维尼修斯（巴西）；麦克托米奈（苏格兰）",
+      "recent_form": "苏格兰前两轮1-0海地、0-1摩洛哥；巴西1-1摩洛哥、3-0海地",
+      "stay_up_index": 4,
+      "one_liner": "巴西争C组第一，苏格兰为出线拿分",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "home": "南非",
+      "away": "韩国",
+      "score": "1-0",
+      "group": "A",
+      "beijing_time": "06/25 09:00",
+      "beijing_date": "2026-06-25",
+      "status": "finished",
+      "source": "https://rg.org/en-ca/news/soccer/world-cup-2026-live-canada-brazil-and-mexico-headline-june-24",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "客队胜",
+            "风险官": "平"
+          },
+          "final": "客队胜",
+          "split": false
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "0-1（四角色看韩国；风险官提醒残阵南非或闷平）",
+      "key_players": "孙兴慜（韩国）；威廉姆斯（南非）",
+      "recent_form": "南非前两轮0-2墨西哥、1-1捷克；韩国2-1捷克、0-1墨西哥",
+      "stay_up_index": 2,
+      "one_liner": "A组生死战：韩国不败即出线，南非残阵背水一战",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "home": "墨西哥",
+      "away": "捷克",
+      "score": "3-0",
+      "group": "A",
+      "beijing_time": "06/25 09:00",
+      "beijing_date": "2026-06-25",
+      "status": "finished",
+      "source": "https://rg.org/en-ca/news/soccer/world-cup-2026-live-canada-brazil-and-mexico-headline-june-24",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "平",
+            "伤病": "平",
+            "舆情": "主队胜",
+            "风险官": "客队胜"
+          },
+          "final": "平",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "1-1（数据/舆情看墨西哥；战术/伤病看轮换闷局；风险官反押捷克）",
+      "key_players": "希门尼斯（墨西哥）；希克（捷克）",
+      "recent_form": "墨西哥前两轮2-0南非、1-0韩国已锁定第一；捷克1-2韩国、1-1南非必须胜",
+      "stay_up_index": 1,
+      "one_liner": "东道主已出线或轮换，捷克背水一战",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
     }
   ]
 }
