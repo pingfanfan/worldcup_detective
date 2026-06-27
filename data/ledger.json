@@ -12,20 +12,20 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 34,
-      "miss": 14
+      "hit": 38,
+      "miss": 16
     },
     "kimi_official": {
       "hit": 0,
       "miss": 0
     },
     "opta": {
-      "hit": 15,
+      "hit": 16,
       "miss": 7
     },
     "coin_flip": {
-      "hit": 17,
-      "miss": 31
+      "hit": 21,
+      "miss": 33
     }
   },
   "token_account": {
@@ -77,15 +77,21 @@
         "match": "突尼斯 vs 荷兰",
         "team": "荷兰",
         "status": "hit"
+      },
+      {
+        "date": "2026-06-27",
+        "match": "乌拉圭 vs 西班牙",
+        "team": "西班牙",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-06-26",
-      "match": "突尼斯 vs 荷兰",
-      "team": "荷兰",
+      "date": "2026-06-27",
+      "match": "乌拉圭 vs 西班牙",
+      "team": "西班牙",
       "status": "hit"
     }
   },
@@ -2043,6 +2049,234 @@
       "recent_form": "土耳其0-2澳大利亚、0-1巴拉圭已出局；美国4-1巴拉圭、2-0澳大利亚已出线",
       "stay_up_index": 1,
       "one_liner": "星条旗轮换练兵，星月军团荣誉战全力一搏",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-06-26",
+      "home": "挪威",
+      "away": "法国",
+      "score": "1-4",
+      "group": "I",
+      "beijing_time": "06/27 03:00",
+      "beijing_date": "2026-06-27",
+      "status": "finished",
+      "source": "https://www.britannica.com/event/2026-FIFA-World-Cup（France won 4-1）",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "客队胜",
+            "风险官": "平"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "待确认（Opta/The Analyst 未查到本场单场概率）",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "1-2（四票客队胜；法国阵容深度与边路优势压制挪威，但已出线轮换/平局即够头名需降档）",
+      "key_players": "哈兰德、厄德高（挪威）；姆巴佩、登贝莱（法国）",
+      "recent_form": "挪威4-1伊拉克、3-2塞内加尔；法国3-1塞内加尔、3-0伊拉克",
+      "stay_up_index": 5,
+      "one_liner": "姆哈金靴对决：法国打平即锁头名，挪威必须取胜才能反超",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-06-26",
+      "home": "塞内加尔",
+      "away": "伊拉克",
+      "score": "5-0",
+      "group": "I",
+      "beijing_time": "06/27 03:00",
+      "beijing_date": "2026-06-27",
+      "status": "finished",
+      "source": "https://www.britannica.com/event/2026-FIFA-World-Cup（Senegal won 5-0）",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认（Opta/The Analyst 未查到本场单场概率）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "2-0（四票主队胜；塞内加尔攻击线 intact，伊拉克防线崩盘，但深盘过热风险官唱平）",
+      "key_players": "马内、萨尔、雅克松（塞内加尔）；艾曼·侯赛因（伊拉克）",
+      "recent_form": "塞内加尔1-3法国、2-3挪威；伊拉克1-4挪威、0-3法国",
+      "stay_up_index": 5,
+      "one_liner": "荣誉战中的深盘热门：非洲大象能否大胜挽回尊严",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-06-26",
+      "home": "佛得角",
+      "away": "沙特阿拉伯",
+      "score": "0-0",
+      "group": "H",
+      "beijing_time": "06/27 08:00",
+      "beijing_date": "2026-06-27",
+      "status": "finished",
+      "source": "https://www.britannica.com/event/2026-FIFA-World-Cup（Match drawn 0-0）",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "客队胜",
+            "舆情": "主队胜",
+            "风险官": "客队胜"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认（Opta/The Analyst 未查到本场单场概率）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "1-0（三票主队胜；佛得角低位纪律性惊艳，但伤停与沙特必须取胜制造分歧）",
+      "key_players": "沃济尼亚、瑞恩·门德斯（佛得角）；奥韦斯、阿尔道萨里（沙特）",
+      "recent_form": "佛得角0-0西班牙、2-2乌拉圭；沙特1-1乌拉圭、0-4西班牙",
+      "stay_up_index": 3,
+      "one_liner": "世界杯新军励志剧本 vs 亚洲铁桶：沙特必须取胜才能保留希望",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-06-26",
+      "home": "乌拉圭",
+      "away": "西班牙",
+      "score": "0-1",
+      "group": "H",
+      "beijing_time": "06/27 08:00",
+      "beijing_date": "2026-06-27",
+      "status": "finished",
+      "source": "https://www.britannica.com/event/2026-FIFA-World-Cup（Spain won 1-0）",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "客队胜",
+            "风险官": "平"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "西班牙 62.4% / 乌拉圭 15.7% / 平 21.9%（Opta/The Analyst）",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "1-2（四票客队胜；西班牙控球与边路优势明显，乌拉圭残阵背水一战）",
+      "key_players": "巴尔韦德（乌拉圭）；亚马尔、尼科·威廉姆斯（西班牙）",
+      "recent_form": "乌拉圭1-1沙特、2-2佛得角；西班牙0-0佛得角、4-0沙特",
+      "stay_up_index": 3,
+      "one_liner": "H组头名争夺战：西班牙不败即第一，乌拉圭必须取胜",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-06-26",
+      "home": "埃及",
+      "away": "伊朗",
+      "score": "1-1",
+      "group": "G",
+      "beijing_time": "06/27 11:00",
+      "beijing_date": "2026-06-27",
+      "status": "finished",
+      "source": "https://www.britannica.com/event/2026-FIFA-World-Cup（Match drawn 1-1）",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "平",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认（Opta/The Analyst 未查到本场单场概率）",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "1-0（三票主队胜；埃及打平即可出线，伊朗必须取胜但破密集乏力，伤病与风险官看平）",
+      "key_players": "萨拉赫、马尔穆什（埃及）；塔雷米、贝兰万德（伊朗）",
+      "recent_form": "埃及1-1比利时、3-1新西兰；伊朗2-2新西兰、0-0比利时",
+      "stay_up_index": 1,
+      "one_liner": "G组生死战：埃及保平即晋级，伊朗必须取胜",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-06-26",
+      "home": "新西兰",
+      "away": "比利时",
+      "score": "1-5",
+      "group": "G",
+      "beijing_time": "06/27 11:00",
+      "beijing_date": "2026-06-27",
+      "status": "finished",
+      "source": "https://www.britannica.com/event/2026-FIFA-World-Cup（Belgium won 5-1）",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "客队胜",
+            "风险官": "平"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "待确认（Opta/The Analyst 未查到本场单场概率）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "0-2（四票客队胜；比利时阵容深度碾压，但前两轮终结荒+本场深盘触发风险官降档）",
+      "key_players": "克里斯·伍德（新西兰）；德布劳内、多库（比利时）",
+      "recent_form": "新西兰2-2伊朗、1-3埃及；比利时1-1埃及、0-0伊朗",
+      "stay_up_index": 1,
+      "one_liner": "欧洲红魔背水一战：必须取胜才能保留出线希望",
       "result_check": {
         "my_swarm": "hit",
         "opta": "n/a",
