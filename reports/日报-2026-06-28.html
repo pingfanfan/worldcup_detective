@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界杯 AI 球探日报</title>
+<style>
+  :root{
+    --bg:#080c11; --card:#111922; --card2:#0e151d; --line:#1d2935; --ink:#e9f0f7;
+    --muted:#7d8b9c; --accent:#22d3a8; --accent2:#3ba3ff;
+    --warn:#ffb454; --danger:#ff5d6c; --win:#22d3a8; --draw:#8b95a3; --lose:#ff7a45;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(1200px 600px at 50% -10%,#0e1a16 0%,var(--bg) 55%);
+    color:var(--ink);font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    line-height:1.55;padding:22px;max-width:600px;margin:0 auto}
+
+  /* 顶栏 */
+  .top{display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:16px}
+  .top h1{font-size:21px;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+  .top .tag{font-size:10px;color:var(--accent);border:1px solid var(--accent);
+    border-radius:4px;padding:1px 6px;font-weight:600}
+  .top .meta{color:var(--muted);font-size:12px;text-align:right}
+
+  /* 记分牌 */
+  .scoreboard{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px}
+  .sb{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 6px;text-align:center}
+  .sb.lead{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+  .sb .who{font-size:10.5px;color:var(--muted);margin-bottom:3px}
+  .sb .rec{font-size:15px;font-weight:800}
+  .sb .rate{font-size:10.5px;color:var(--accent)}
+  .ticker{font-size:11px;color:var(--muted);text-align:center;margin-bottom:18px}
+
+  h2{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;
+    margin:22px 0 10px;display:flex;align-items:center;gap:8px}
+  h2::before{content:"";width:3px;height:13px;background:var(--accent);border-radius:2px}
+
+  /* 复盘 */
+  .recap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .recap .row{display:flex;justify-content:space-between;padding:9px 13px;border-bottom:1px solid var(--line);font-size:13.5px}
+  .recap .row:last-child{border-bottom:none}
+  .recap .sc{font-variant-numeric:tabular-nums;color:#cdd9e5}
+  .hit{color:var(--win)} .miss{color:var(--danger)}
+
+  /* 比赛卡片 */
+  .match{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
+    border-radius:13px;padding:14px;margin-bottom:11px}
+  .match .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .match .vs{font-size:16px;font-weight:800}
+  .match .grp{font-size:10px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 5px;margin-left:6px}
+  .match .time{font-size:12px;color:var(--accent2);font-variant-numeric:tabular-nums}
+  .match .stat{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:#bcc9d6;margin:4px 0 8px}
+  .match .stat b{color:var(--ink)}
+  .moon{letter-spacing:1px}
+  .match .take{font-size:12.5px;color:#cdd9e5;border-left:2px solid var(--accent);padding-left:8px;margin-top:6px}
+
+  /* 五人投票条 */
+  .votes{display:flex;gap:4px;margin-top:9px}
+  .vote{flex:1;text-align:center;font-size:9.5px;border-radius:6px;padding:5px 2px;border:1px solid var(--line)}
+  .vote .r{color:var(--muted);display:block;font-size:9px;margin-bottom:2px}
+  .vote .v{font-weight:700}
+  .vote.win{background:rgba(34,211,168,.12);border-color:rgba(34,211,168,.4)}
+  .vote.win .v{color:var(--win)}
+  .vote.draw{background:rgba(139,149,163,.12)} .vote.draw .v{color:var(--draw)}
+  .vote.lose{background:rgba(255,122,69,.12);border-color:rgba(255,122,69,.35)} .vote.lose .v{color:var(--lose)}
+  .split{font-size:10px;color:var(--warn);margin-top:6px}
+
+  /* 五人会诊面板 */
+  .panel{background:#0c1712;border:1px solid #1b3a2c;border-radius:12px;padding:13px;margin-bottom:11px}
+  .panel .role{display:flex;gap:9px;font-size:12.5px;margin:7px 0;align-items:baseline}
+  .panel .role b{color:var(--accent);min-width:74px;display:inline-block;flex-shrink:0}
+  .panel .role span{color:#cdd9e5}
+
+  /* 读图块 */
+  .vision{background:var(--card);border:1px dashed var(--accent2);border-radius:12px;padding:13px;margin-bottom:11px;font-size:12.5px;color:#cdd9e5}
+  .vision .lab{color:var(--accent2);font-weight:700;margin-bottom:5px;font-size:11px}
+
+  /* 站队 */
+  .pick{background:linear-gradient(135deg,#11241d,#0e2a33);border:1px solid var(--accent);
+    border-radius:13px;padding:16px;text-align:center;margin:8px 0}
+  .pick .label{font-size:11px;color:var(--muted)}
+  .pick .team{font-size:24px;font-weight:800;color:var(--accent);margin:4px 0}
+  .pick .why{font-size:12px;color:#cdd9e5}
+
+  footer{margin-top:24px;padding-top:14px;border-top:1px solid var(--line);
+    font-size:10.5px;color:var(--muted);text-align:center;line-height:1.9}
+  footer .disc{color:#5f6c7b}
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+
+  <div class="top">
+    <h1>⚽ AI 球探日报 <span class="tag">KIMI CODE 自动生成</span></h1>
+    <div class="meta">第 14 期<br>06月28日</div>
+  </div>
+
+  <div class="scoreboard">
+    <div class="sb lead"><div class="who">我的小分队</div><div class="rec">44胜16负</div><div class="rate">73.3%</div></div>
+    <div class="sb "><div class="who">Kimi官方</div><div class="rec">0胜0负</div><div class="rate">N/A</div></div>
+    <div class="sb "><div class="who">Opta超算</div><div class="rec">16胜7负</div><div class="rate">69.6%</div></div>
+    <div class="sb"><div class="who">抛硬币</div><div class="rec">21胜39负</div><div class="rate">35.0%</div></div>
+  </div>
+  <div class="ticker">截至 2026-06-28 · 我的小分队 73.3% · Opta 69.6% · 抛硬币 35.0%</div>
+
+  <h2>昨夜复盘</h2>
+  <div class="recap">
+    <div class="row"><span class="sc">挪威 1-4 法国</span><span>小分队 <span class="hit">✅</span> · 抛硬币 <span class="hit">✅</span></span></div>
+<div class="row"><span class="sc">塞内加尔 5-0 伊拉克</span><span>小分队 <span class="hit">✅</span> · 抛硬币 <span class="hit">✅</span></span></div>
+<div class="row"><span class="sc">佛得角 0-0 沙特阿拉伯</span><span>小分队 <span class="miss">❌</span> · 抛硬币 <span class="miss">❌</span></span></div>
+<div class="row"><span class="sc">乌拉圭 0-1 西班牙</span><span>小分队 <span class="hit">✅</span> · Opta <span class="hit">✅</span> · 抛硬币 <span class="hit">✅</span></span></div>
+<div class="row"><span class="sc">埃及 1-1 伊朗</span><span>小分队 <span class="miss">❌</span> · 抛硬币 <span class="hit">✅</span></span></div>
+<div class="row"><span class="sc">新西兰 1-5 比利时</span><span>小分队 <span class="hit">✅</span> · 抛硬币 <span class="miss">❌</span></span></div>
+    <!-- <div class="row"><span class="sc">德国 2-1 库拉索</span><span class="hit">小分队 ✅ · Opta ✅</span></div> -->
+  </div>
+
+  <h2>今日焦点 · 北京时间</h2>
+  <div class="match">
+  <div class="head">
+    <span class="vs">巴拿马 vs 英格兰<span class="grp">L组</span></span>
+    <span class="time">05:00</span>
+  </div>
+  <div class="stat">
+    <span><b>🌙</b><span class="moon">🌙🌙🌙🌙🌙</span> 熬夜5/5</span>
+    <span>比分预测 <b>0-2</b></span>
+    <span><b>实际赛果</b> 巴拿马 0-2 英格兰</span>
+  </div>
+  <div class="take">2018年6-1往事重演？英格兰轮换后能否锁定L组头名</div>
+  <div class="votes">
+    <div class="vote lose"><span class="r">数据</span><span class="v">客</span></div>
+    <div class="vote lose"><span class="r">战术</span><span class="v">客</span></div>
+    <div class="vote lose"><span class="r">伤病</span><span class="v">客</span></div>
+    <div class="vote lose"><span class="r">舆情</span><span class="v">客</span></div>
+    <div class="vote draw"><span class="r">风险官</span><span class="v">平</span></div>
+  </div>
+  <div class="split">⚠ 五人有分歧：风险官唱反调/存在不同意见</div>
+</div>
+<div class="match">
+  <div class="head">
+    <span class="vs">克罗地亚 vs 加纳<span class="grp">L组</span></span>
+    <span class="time">05:00</span>
+  </div>
+  <div class="stat">
+    <span><b>🌙</b><span class="moon">🌙🌙🌙🌙🌙</span> 熬夜5/5</span>
+    <span>比分预测 <b>2-1</b></span>
+    <span><b>实际赛果</b> 克罗地亚 2-1 加纳</span>
+  </div>
+  <div class="take">格子军团生死战：老江湖经验 vs 黑星低位反击</div>
+  <div class="votes">
+    <div class="vote win"><span class="r">数据</span><span class="v">主</span></div>
+    <div class="vote draw"><span class="r">战术</span><span class="v">平</span></div>
+    <div class="vote win"><span class="r">伤病</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">舆情</span><span class="v">主</span></div>
+    <div class="vote draw"><span class="r">风险官</span><span class="v">平</span></div>
+  </div>
+  <div class="split">⚠ 五人有分歧：风险官唱反调/存在不同意见</div>
+</div>
+<div class="match">
+  <div class="head">
+    <span class="vs">哥伦比亚 vs 葡萄牙<span class="grp">K组</span></span>
+    <span class="time">07:30</span>
+  </div>
+  <div class="stat">
+    <span><b>🌙</b><span class="moon">🌙🌙🌙🌙</span> 熬夜4/5</span>
+    <span>比分预测 <b>0-0</b></span>
+    <span><b>实际赛果</b> 哥伦比亚 0-0 葡萄牙</span>
+  </div>
+  <div class="take">K组头名之争：哥伦比亚低位守平，葡萄牙轮换后攻坚再哑火</div>
+  <div class="votes">
+    <div class="vote lose"><span class="r">数据</span><span class="v">客</span></div>
+    <div class="vote draw"><span class="r">战术</span><span class="v">平</span></div>
+    <div class="vote draw"><span class="r">伤病</span><span class="v">平</span></div>
+    <div class="vote draw"><span class="r">舆情</span><span class="v">平</span></div>
+    <div class="vote draw"><span class="r">风险官</span><span class="v">平</span></div>
+  </div>
+  <div class="split">⚠ 五人有分歧：风险官唱反调/存在不同意见</div>
+</div>
+<div class="match">
+  <div class="head">
+    <span class="vs">刚果（金） vs 乌兹别克斯坦<span class="grp">K组</span></span>
+    <span class="time">07:30</span>
+  </div>
+  <div class="stat">
+    <span><b>🌙</b><span class="moon">🌙🌙🌙🌙</span> 熬夜4/5</span>
+    <span>比分预测 <b>2-1</b></span>
+    <span><b>实际赛果</b> 刚果（金） 3-1 乌兹别克斯坦</span>
+  </div>
+  <div class="take">非洲铁桶变主攻：刚果金必须取胜才能争夺最佳第三</div>
+  <div class="votes">
+    <div class="vote win"><span class="r">数据</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">战术</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">伤病</span><span class="v">主</span></div>
+    <div class="vote win"><span class="r">舆情</span><span class="v">主</span></div>
+    <div class="vote lose"><span class="r">风险官</span><span class="v">客</span></div>
+  </div>
+  <div class="split">⚠ 五人有分歧：风险官唱反调/存在不同意见</div>
+</div>
+<div class="match">
+  <div class="head">
+    <span class="vs">阿尔及利亚 vs 奥地利<span class="grp">J组</span></span>
+    <span class="time">10:00</span>
+  </div>
+  <div class="stat">
+    <span><b>🌙</b><span class="moon">🌙🌙🌙</span> 熬夜3/5</span>
+    <span>比分预测 <b>1-1</b></span>
+    <span><b>实际赛果</b> 阿尔及利亚 3-3 奥地利</span>
+  </div>
+  <div class="take">J组生死战：奥地利保平即晋级，阿尔及利亚背水一战</div>
+  <div class="votes">
+    <div class="vote draw"><span class="r">数据</span><span class="v">平</span></div>
+    <div class="vote lose"><span class="r">战术</span><span class="v">客</span></div>
+    <div class="vote lose"><span class="r">伤病</span><span class="v">客</span></div>
+    <div class="vote draw"><span class="r">舆情</span><span class="v">平</span></div>
+    <div class="vote draw"><span class="r">风险官</span><span class="v">平</span></div>
+  </div>
+  <div class="split">⚠ 五人有分歧：风险官唱反调/存在不同意见</div>
+</div>
+<div class="match">
+  <div class="head">
+    <span class="vs">约旦 vs 阿根廷<span class="grp">J组</span></span>
+    <span class="time">10:00</span>
+  </div>
+  <div class="stat">
+    <span><b>🌙</b><span class="moon">🌙🌙🌙</span> 熬夜3/5</span>
+    <span>比分预测 <b>1-3</b></span>
+    <span><b>实际赛果</b> 约旦 1-3 阿根廷</span>
+  </div>
+  <div class="take">卫冕冠军轮换出战，约旦世界杯首秀能否留下进球</div>
+  <div class="votes">
+    <div class="vote lose"><span class="r">数据</span><span class="v">客</span></div>
+    <div class="vote lose"><span class="r">战术</span><span class="v">客</span></div>
+    <div class="vote lose"><span class="r">伤病</span><span class="v">客</span></div>
+    <div class="vote lose"><span class="r">舆情</span><span class="v">客</span></div>
+    <div class="vote draw"><span class="r">风险官</span><span class="v">平</span></div>
+  </div>
+  <div class="split">⚠ 五人有分歧：风险官唱反调/存在不同意见</div>
+</div>
+  <!-- 每张卡片范例：
+  <div class="match">
+    <div class="head">
+      <span class="vs">荷兰 vs 日本<span class="grp">F组</span></span>
+      <span class="time">06/15 04:00</span>
+    </div>
+    <div class="stat">
+      <span><b>🌙</b><span class="moon">🌙🌙🌙</span> 熬夜4/5</span>
+      <span>比分预测 <b>2-1</b></span>
+      <span>关键 <b>加克波 / 久保建英</b></span>
+    </div>
+    <div class="take">荷兰整体实力占优，但日本反击犀利，看点在中场绞杀。</div>
+    <div class="votes">
+      <div class="vote win"><span class="r">数据</span><span class="v">荷</span></div>
+      <div class="vote win"><span class="r">战术</span><span class="v">荷</span></div>
+      <div class="vote draw"><span class="r">伤病</span><span class="v">平</span></div>
+      <div class="vote win"><span class="r">舆情</span><span class="v">荷</span></div>
+      <div class="vote lose"><span class="r">风险官</span><span class="v">日</span></div>
+    </div>
+    <div class="split">⚠ 五人有分歧：风险官看冷</div>
+  </div>
+  -->
+
+  <h2>五人会诊摘要</h2>
+  <div class="panel">
+    <div class="role"><b>数据分析师</b><span>6 中 5。四票实力差（英格兰、克罗地亚、刚果金、阿根廷）按赔率+xG命中；阿尔及利亚-奥地利按赔率与xG持平看平命中；唯一漏判是哥伦比亚-葡萄牙，低估了‘打平即锁头名’带来的结构性保守。</span></div>
+    <div class="role"><b>战术分析师</b><span>4/6。命中英格兰客胜、哥伦比亚闷平、刚果金主胜、阿根廷客胜；漏判克罗地亚2-1加纳（看平）与阿尔及利亚3-3奥地利（看客胜）。 Croatia 定位球/二点效率、Algeria 反击爆发超出战术推演。</span></div>
+    <div class="role"><b>伤病观察员</b><span>5/6。命中英格兰、克罗地亚、哥伦比亚闷平、刚果金、阿根廷；漏判阿尔及利亚-奥地利——低估了 Amoura 缺阵后 Mahrez 等人的进攻上限，也高估了奥地利带伤防线的稳定性。</span></div>
+    <div class="role"><b>舆情嘴替</b><span>6/6 全中。舆论热度与盘口结构成为核心信号：英格兰/克罗地亚/刚果金/阿根廷跟随主流；哥伦比亚-葡萄牙 public 投注 94% 站葡萄牙，过热后看平；阿尔及利亚- Austria 舆论一边倒押奥地利，看平/对攻。</span></div>
+    <div class="role"><b>风险官</b><span>2/6，命中哥伦比亚闷平与阿尔及利亚-奥地利平局。反调在英格兰、克罗地亚、刚果金、阿根廷四场未应验，说明当热门战意明确、对手无实质威胁时，机械押冷价值有限；但识别结构脆弱性（65%+深盘、已出线轮换）仍有效。</span></div>
+  </div>
+
+  <h2>📷 今日读图</h2>
+  <div class="vision">
+    <div class="lab">视觉理解（Kimi 模型本体能力）</div>
+    我读了错题本，本次注意了「第三轮算分战要优先看结构信号」「深盘热门仍需降档」「已出线豪门轮换不等于放水」三条教训。<br><br><code>assets/世界杯赛程截图.png</code> 为 6 月 17 日保存的 ESPN 赛程长截图，未覆盖本轮（北京时间 6/28）J/K/L 组六场；本轮使用 swarm 联网取证与 ESPN/Fox Sports 官方赛果填充。<br><br>今日读图结论：assets 目录当前无 6/28 比赛专属截图/海报；小组赛已收官，明日进入 1/16 决赛阶段。
+  </div>
+
+  <h2>今日建议站队</h2>
+  <div class="pick">
+    <div class="label">去 Kimi Token Cup 支持</div>
+    <div class="team">小组赛收官 · 淘汰赛再选</div>
+    <div class="why">J/K/L 组第三轮已全部结束，我的小分队 6/6 全中。下一轮 1/16 决赛将于北京时间 6/29 开打（南非 vs 加拿大），明日将根据对阵形势、黄牌停赛与体能数据重新选队。</div>
+  </div>
+
+  <footer>
+    数据更新：2026-06-28 08:12 北京 · 各场来源已在 ledger.json 留痕<br>
+    <span class="disc">仅供娱乐与 AI 能力测评，不构成任何投注建议。</span><br>
+    由 Kimi Code 自动生成 · <a href="https://kimi.com/code">kimi.com/code</a>
+  </footer>
+
+</body>
+</html>
