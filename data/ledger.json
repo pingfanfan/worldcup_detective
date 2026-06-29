@@ -12,7 +12,7 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 44,
+      "hit": 45,
       "miss": 16
     },
     "kimi_official": {
@@ -20,12 +20,12 @@
       "miss": 0
     },
     "opta": {
-      "hit": 16,
+      "hit": 17,
       "miss": 7
     },
     "coin_flip": {
       "hit": 21,
-      "miss": 39
+      "miss": 40
     }
   },
   "token_account": {
@@ -83,15 +83,21 @@
         "match": "乌拉圭 vs 西班牙",
         "team": "西班牙",
         "status": "hit"
+      },
+      {
+        "date": "2026-06-29",
+        "match": "南非 vs 加拿大",
+        "team": "加拿大",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-06-27",
-      "match": "乌拉圭 vs 西班牙",
-      "team": "西班牙",
+      "date": "2026-06-29",
+      "match": "南非 vs 加拿大",
+      "team": "加拿大",
       "status": "hit"
     }
   },
@@ -2508,6 +2514,44 @@
       "result_check": {
         "my_swarm": "hit",
         "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-06-28",
+      "home": "南非",
+      "away": "加拿大",
+      "score": "0-1",
+      "group": "32强",
+      "beijing_time": "06/29 03:00",
+      "beijing_date": "2026-06-29",
+      "status": "finished",
+      "source": "https://www.foxsports.com/soccer/fifa-world-cup-men-south-africa-vs-canada-jun-28-2026-game-boxscore-607903",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "客队胜",
+            "风险官": "平"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "加拿大 55.1% / 平 24.9% / 南非 20.0%（Opta 超级计算机，赛前单场概率）",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "0-1（赛前数据/舆情最热剧本；实际赛果：欧斯塔基奥 90+2' 绝杀）",
+      "key_players": "Jonathan David、Stephen Eustáquio（加拿大）；Ronwen Williams、Teboho Mokoena（南非）",
+      "recent_form": "南非 1-1-1（0-2 墨西哥、1-1 捷克、1-0 韩国）；加拿大 1-1-1（1-1 波黑、6-0 卡塔尔、1-2 瑞士）",
+      "stay_up_index": 5,
+      "one_liner": "世界杯史上首场 1/16 决赛：东道主加拿大洛杉矶绝杀南非晋级",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
         "kimi_official": "n/a",
         "coin_flip": "miss"
       }
