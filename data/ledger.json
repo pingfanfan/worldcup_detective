@@ -12,16 +12,16 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 46,
-      "miss": 16
+      "hit": 47,
+      "miss": 18
     },
     "kimi_official": {
       "hit": 0,
       "miss": 0
     },
     "opta": {
-      "hit": 18,
-      "miss": 7
+      "hit": 19,
+      "miss": 8
     },
     "coin_flip": {
       "hit": 21,
@@ -98,7 +98,7 @@
       "date": "2026-06-30",
       "match": "德国 vs 巴拉圭",
       "team": "德国",
-      "status": "pending"
+      "status": "miss"
     }
   },
   "matches": [
@@ -2563,8 +2563,8 @@
       "group": "1/16",
       "beijing_time": "06/30 01:00",
       "beijing_date": "2026-06-30",
-      "status": "scheduled",
-      "source": "https://sports.yahoo.com/articles/2026-world-cup-tv-schedule-140319091.html",
+      "status": "finished",
+      "source": "https://www.world-cup-schedule.com/match/76/zh",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -2585,7 +2585,14 @@
       "key_players": "Vinícius Júnior（巴西）、Ritsu Dōan（日本）",
       "recent_form": "巴西小组赛 1-1 摩洛哥、3-0 海地、3-0 苏格兰；日本 2-2 荷兰、4-0 突尼斯、1-1 瑞典",
       "stay_up_index": 5,
-      "one_liner": "淘汰赛首战：维尼修斯连续三场进球 vs 日本近 10 场连续进球，高温休斯顿谁能破局"
+      "one_liner": "淘汰赛首战：维尼修斯连续三场进球 vs 日本近 10 场连续进球，高温休斯顿谁能破局",
+      "score": "2-1",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "n/a"
+      }
     },
     {
       "date": "2026-06-29",
@@ -2594,8 +2601,8 @@
       "group": "1/16",
       "beijing_time": "06/30 04:30",
       "beijing_date": "2026-06-30",
-      "status": "scheduled",
-      "source": "https://sports.yahoo.com/articles/2026-world-cup-tv-schedule-140319091.html",
+      "status": "finished",
+      "source": "https://www.world-cup-schedule.com/match/74/zh",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -2616,7 +2623,14 @@
       "key_players": "Jamal Musiala（德国）、Miguel Almirón（巴拉圭）",
       "recent_form": "德国小组赛 7-1 库拉索、2-1 科特迪瓦、1-2 厄瓜多尔；巴拉圭 1-4 美国、1-0 土耳其、0-0 澳大利亚",
       "stay_up_index": 5,
-      "one_liner": "日耳曼战车轮挑战南美铁桶：穆西亚拉-维尔茨能否敲开巴拉圭低位防线"
+      "one_liner": "日耳曼战车轮挑战南美铁桶：穆西亚拉-维尔茨能否敲开巴拉圭低位防线",
+      "score": "1-1（点球 3-4）",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "miss",
+        "kimi_official": "n/a",
+        "coin_flip": "n/a"
+      }
     },
     {
       "date": "2026-06-29",
@@ -2625,8 +2639,8 @@
       "group": "1/16",
       "beijing_time": "06/30 09:00",
       "beijing_date": "2026-06-30",
-      "status": "scheduled",
-      "source": "https://sports.yahoo.com/articles/2026-world-cup-tv-schedule-140319091.html",
+      "status": "finished",
+      "source": "https://www.world-cup-schedule.com/match/75/zh",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -2647,7 +2661,191 @@
       "key_players": "Cody Gakpo（荷兰）、Achraf Hakimi（摩洛哥）",
       "recent_form": "荷兰小组赛 2-2 日本、5-1 瑞典、3-1 突尼斯；摩洛哥 1-1 巴西、1-0 苏格兰、4-2 海地",
       "stay_up_index": 3,
-      "one_liner": "F 组第一 vs C 组第二：橙衣军团火力全开 vs 阿特拉斯雄狮 2022 四强班底"
+      "one_liner": "F 组第一 vs C 组第二：橙衣军团火力全开 vs 阿特拉斯雄狮 2022 四强班底",
+      "score": "1-1（点球 2-3）",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "n/a"
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "home": "科特迪瓦",
+      "away": "挪威",
+      "score": "1-2",
+      "group": "1/16",
+      "beijing_time": "07/01 01:00",
+      "beijing_date": "2026-07-01",
+      "status": "finished",
+      "source": "https://www.foxsports.com/soccer/fifa-world-cup-men-ivory-coast-vs-norway-jun-30-2026-game-boxscore-607908",
+      "predictions": {
+        "my_swarm": "未预测（不在前一日报中）",
+        "opta": "未预测",
+        "kimi_official": "未预测",
+        "coin_flip": "未预测"
+      },
+      "score_pred": "1-2（赛后记录）",
+      "key_players": "阿马德·迪亚洛、尼古拉·佩佩（科特迪瓦）；哈兰德、努萨（挪威）",
+      "recent_form": "科特迪瓦小组赛2-1德国、1-0厄瓜多尔、2-0库拉索；挪威4-1伊拉克、3-2塞内加尔、1-4法国",
+      "stay_up_index": 4,
+      "one_liner": "哈兰德进球+努萨制胜，挪威28年来首进淘汰赛次轮",
+      "result_check": {
+        "my_swarm": "n/a",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "n/a"
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "home": "法国",
+      "away": "瑞典",
+      "score": "3-0",
+      "group": "1/16",
+      "beijing_time": "07/01 05:00",
+      "beijing_date": "2026-07-01",
+      "status": "finished",
+      "source": "https://www.world-cup-schedule.com/match/77/zh",
+      "predictions": {
+        "my_swarm": "未预测（不在前一日报中）",
+        "opta": "未预测",
+        "kimi_official": "未预测",
+        "coin_flip": "未预测"
+      },
+      "score_pred": "3-0（赛后记录）",
+      "key_players": "姆巴佩、巴尔科拉（法国）；哲凯赖什、伊萨克（瑞典）",
+      "recent_form": "法国小组赛3-1塞内加尔、3-0伊拉克、1-4挪威；瑞典5-1突尼斯、1-5荷兰",
+      "stay_up_index": 4,
+      "one_liner": "姆巴佩双响+巴尔科拉建功，法国轻取瑞典晋级",
+      "result_check": {
+        "my_swarm": "n/a",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "n/a"
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "home": "墨西哥",
+      "away": "厄瓜多尔",
+      "score": "2-0",
+      "group": "1/16",
+      "beijing_time": "07/01 09:00",
+      "beijing_date": "2026-07-01",
+      "status": "finished",
+      "source": "https://www.foxsports.com/soccer/fifa-world-cup-men-mexico-vs-ecuador-jun-30-2026-game-boxscore-607909",
+      "predictions": {
+        "my_swarm": "未预测（不在前一日报中）",
+        "opta": "未预测",
+        "kimi_official": "未预测",
+        "coin_flip": "未预测"
+      },
+      "score_pred": "2-0（赛后记录）",
+      "key_players": "胡利安·基尼奥内斯、劳尔·希门尼斯（墨西哥）；莫伊塞斯·凯塞多、因卡皮耶（厄瓜多尔）",
+      "recent_form": "墨西哥小组赛2-0南非、1-0韩国、3-0捷克；厄瓜多尔2-1德国、0-1科特迪瓦",
+      "stay_up_index": 3,
+      "one_liner": "东道主阿兹特克堡垒：基尼奥内斯传射，墨西哥零封厄瓜多尔",
+      "result_check": {
+        "my_swarm": "n/a",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "n/a"
+      }
+    },
+    {
+      "date": "2026-07-01",
+      "home": "英格兰",
+      "away": "刚果（金）",
+      "group": "1/16",
+      "beijing_time": "07/02 00:00",
+      "beijing_date": "2026-07-02",
+      "status": "scheduled",
+      "source": "https://www.nbcsports.com/soccer/news/2026-world-cup-round-of-32-confirmed-schedule-predictions-for-knockout-round",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "英格兰 73.9% / 刚果（金） 11.3%（The Analyst Opta 90 分钟胜率）",
+        "kimi_official": "待确认",
+        "coin_flip": "平局"
+      },
+      "score_pred": "2-1（四票主胜，风险官看平；数据端英格兰 Opta 胜率 73.9%，但淘汰赛低比分常态）",
+      "key_players": "哈里·凯恩、贝林厄姆（英格兰）；约昂·维萨、巴坎布（刚果（金））",
+      "recent_form": "英格兰小组赛 4-2 克罗地亚、0-0 加纳、2-0 巴拿马；刚果（金）1-1 葡萄牙、0-1 哥伦比亚、3-1 乌兹别克",
+      "stay_up_index": 5,
+      "one_liner": "三狮军团首战非洲新军，刚果金低位铁桶能否再演葡萄牙式冷门"
+    },
+    {
+      "date": "2026-07-01",
+      "home": "比利时",
+      "away": "塞内加尔",
+      "group": "1/16",
+      "beijing_time": "07/02 04:00",
+      "beijing_date": "2026-07-02",
+      "status": "scheduled",
+      "source": "https://www.nbcsports.com/soccer/news/2026-world-cup-round-of-32-confirmed-schedule-predictions-for-knockout-round",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "比利时 45.6% / 塞内加尔 27.0% / 平 27.4%（The Analyst Opta 90 分钟胜率）；比利时晋级 59.0%",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "2-1（四票主胜，风险官看平；本场是三场中结构脆弱性最高的一场）",
+      "key_players": "德布劳内、特罗萨德（比利时）；马内、伊斯梅拉·萨尔（塞内加尔）",
+      "recent_form": "比利时小组赛 1-1 埃及、0-0 伊朗、5-1 新西兰；塞内加尔 1-3 法国、2-3 挪威、5-0 伊拉克",
+      "stay_up_index": 4,
+      "one_liner": "欧洲红魔经验 vs 非洲冠军速度，门迪缺阵成最大单一变量"
+    },
+    {
+      "date": "2026-07-01",
+      "home": "美国",
+      "away": "波黑",
+      "group": "1/16",
+      "beijing_time": "07/02 08:00",
+      "beijing_date": "2026-07-02",
+      "status": "scheduled",
+      "source": "https://www.nbcsports.com/soccer/news/2026-world-cup-round-of-32-confirmed-schedule-predictions-for-knockout-round",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "美国 67.5% / 波黑 待确认（The Analyst Opta 90 分钟胜率）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "2-1（四票主胜，风险官看平；东道主历史淘汰赛战绩拉胯是真实风险）",
+      "key_players": "巴洛贡、普利西奇（美国）；哲科、德米罗维奇（波黑）",
+      "recent_form": "美国小组赛 4-1 巴拉圭、2-0 澳大利亚、2-3 土耳其（轮换）；波黑 1-1 加拿大、1-4 瑞士、3-1 卡塔尔",
+      "stay_up_index": 3,
+      "one_liner": "东道主旧金山晚场迎战波黑童话，哲科情怀能否续写"
     }
   ]
 }
