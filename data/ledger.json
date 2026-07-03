@@ -12,7 +12,7 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 50,
+      "hit": 53,
       "miss": 18
     },
     "kimi_official": {
@@ -20,12 +20,12 @@
       "miss": 0
     },
     "opta": {
-      "hit": 22,
+      "hit": 25,
       "miss": 8
     },
     "coin_flip": {
-      "hit": 22,
-      "miss": 43
+      "hit": 23,
+      "miss": 45
     }
   },
   "token_account": {
@@ -101,15 +101,21 @@
         "match": "英格兰 vs 刚果（金）",
         "team": "英格兰",
         "status": "hit"
+      },
+      {
+        "date": "2026-07-02",
+        "match": "西班牙 vs 奥地利",
+        "team": "西班牙",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-07-02",
-      "match": "西班牙 vs 奥地利",
-      "team": "西班牙",
+      "date": "2026-07-03",
+      "match": "阿根廷 vs 佛得角",
+      "team": "阿根廷",
       "status": "pending"
     }
   },
@@ -2887,8 +2893,8 @@
       "group": "1/16",
       "beijing_time": "07/03 03:00",
       "beijing_date": "2026-07-03",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://www.chinanews.com.cn/ty/2026/07-03/10651786.shtml",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -2899,17 +2905,28 @@
             "风险官": "平"
           },
           "final": "主队胜",
-          "split": true
+          "split": true,
+          "result": "hit"
         },
         "opta": "西班牙 68.8% / 奥地利 31.2%（GoalIQ/Opta 模型，赛前单场胜率）",
         "kimi_official": "待确认",
-        "coin_flip": "主队胜"
+        "coin_flip": "主队胜",
+        "opta_result": "hit",
+        "kimi_result": "n/a",
+        "coin_flip_result": "hit"
       },
       "score_pred": "2-0（四票主队胜，风险官看平；西班牙小组赛 0 失球、xG 7.93，但尼科·威廉斯与皮诺伤缺收敛比分）",
       "key_players": "拉明·亚马尔、米克尔·奥亚萨瓦尔（西班牙）；马尔科·阿瑙托维奇、马塞尔·萨比策（奥地利）",
       "recent_form": "西班牙小组赛 2 胜 1 平积 7 分，0 失球；奥地利 1 胜 1 平 1 负积 4 分，进 6 失 6",
       "stay_up_index": 5,
-      "one_liner": "传控王者 vs 朗尼克高位逼抢：亚马尔能否撕开奥地利防线"
+      "one_liner": "传控王者 vs 朗尼克高位逼抢：亚马尔能否撕开奥地利防线",
+      "score": "3-0",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
     },
     {
       "date": "2026-07-02",
@@ -2918,8 +2935,8 @@
       "group": "1/16",
       "beijing_time": "07/03 07:00",
       "beijing_date": "2026-07-03",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://www.khaspress.com/2026/07/fifa-world-cup-2026-portugal-vs-croatia-match-results-highlights/",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -2930,17 +2947,28 @@
             "风险官": "平"
           },
           "final": "主队胜",
-          "split": true
+          "split": true,
+          "result": "hit"
         },
         "opta": "葡萄牙 ~55% / 平 ~25% / 克罗地亚 ~20%（赛前盘口隐含概率汇总）",
         "kimi_official": "待确认",
-        "coin_flip": "平"
+        "coin_flip": "平",
+        "opta_result": "hit",
+        "kimi_result": "n/a",
+        "coin_flip_result": "miss"
       },
       "score_pred": "2-1（四票主队胜，风险官看平；C罗 vs 莫德里奇最后一舞，克罗地亚防线老化但加时/点球经验顶级）",
       "key_players": "克里斯蒂亚诺·罗纳尔多、布鲁诺·费尔南德斯（葡萄牙）；卢卡·莫德里奇、约什科·格瓦迪奥尔（克罗地亚）",
       "recent_form": "葡萄牙小组赛 1 胜 2 平积 5 分，进 6 失 1；克罗地亚 2 胜 1 负积 6 分，进 5 失 5",
       "stay_up_index": 4,
-      "one_liner": "诸神黄昏：41 岁 C 罗与 40 岁魔笛的淘汰赛最后一舞"
+      "one_liner": "诸神黄昏：41 岁 C 罗与 40 岁魔笛的淘汰赛最后一舞",
+      "score": "2-1",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
     },
     {
       "date": "2026-07-02",
@@ -2949,8 +2977,8 @@
       "group": "1/16",
       "beijing_time": "07/03 11:00",
       "beijing_date": "2026-07-03",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://www.163.com/dy/article/L0TQF9LH053469LG.html",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -2961,17 +2989,121 @@
             "风险官": "客队胜"
           },
           "final": "主队胜",
-          "split": true
+          "split": true,
+          "result": "hit"
         },
         "opta": "瑞士 49.5% / 阿尔及利亚 23.9% / 平 26.6%（The Analyst Opta 90 分钟胜率）；瑞士晋级 63.75%",
         "kimi_official": "待确认",
-        "coin_flip": "客队胜"
+        "coin_flip": "客队胜",
+        "opta_result": "hit",
+        "kimi_result": "n/a",
+        "coin_flip_result": "miss"
       },
       "score_pred": "2-1（四票主队胜，风险官直接押阿尔及利亚客胜；瑞士结构占优但淘汰赛 90 分钟胜率历史偏低）",
       "key_players": "布雷尔·恩博洛、格拉尼特·扎卡（瑞士）；里亚德·马赫雷斯、穆罕默德·阿穆拉（伤疑，阿尔及利亚）",
       "recent_form": "瑞士小组赛 2 胜 1 平积 7 分，进 7 失 3；阿尔及利亚 1 胜 1 平 1 负积 4 分，进 5 失 7",
       "stay_up_index": 3,
-      "one_liner": "瑞士军刀 vs 沙漠之狐：前瑞士主帅彼得科维奇反戈旧主"
+      "one_liner": "瑞士军刀 vs 沙漠之狐：前瑞士主帅彼得科维奇反戈旧主",
+      "score": "2-0",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-07-03",
+      "home": "澳大利亚",
+      "away": "埃及",
+      "group": "1/16",
+      "beijing_time": "07/04 02:00",
+      "beijing_date": "2026-07-04",
+      "status": "scheduled",
+      "source": "https://sports.yahoo.com/soccer/article/2026-fifa-world-cup-daily-schedule-every-match-date-kickoff-time-and-venue-for-all-48-teams-234515087.html",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "主队胜",
+            "舆情": "平",
+            "风险官": "主队胜"
+          },
+          "final": "平",
+          "split": true
+        },
+        "opta": "埃及晋级 54.08% / 澳大利亚 ~45.92%（Opta 超级计算机）",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "1-1（五人分歧，数据/战术看客胜，伤病/风险官看主胜，舆情看平；取中位数僵持局）",
+      "key_players": "Mathew Ryan、Nestory Irankunda（澳大利亚）；Mohamed Salah、Omar Marmoush（埃及）",
+      "recent_form": "澳大利亚小组赛 2-0 土耳其、0-2 美国、0-0 巴拉圭；埃及 1-1 比利时、3-1 新西兰、1-1 伊朗",
+      "stay_up_index": 5,
+      "one_liner": "法老王萨拉赫腿筋成疑 vs 袋鼠低位铁桶，本轮最势均力敌的 1/16 决赛"
+    },
+    {
+      "date": "2026-07-03",
+      "home": "阿根廷",
+      "away": "佛得角",
+      "group": "1/16",
+      "beijing_time": "07/04 06:00",
+      "beijing_date": "2026-07-04",
+      "status": "scheduled",
+      "source": "https://sports.yahoo.com/soccer/article/2026-fifa-world-cup-daily-schedule-every-match-date-kickoff-time-and-venue-for-all-48-teams-234515087.html",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "阿根廷晋级 86.17%（Opta 超级计算机）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "2-0（四票主胜，风险官看平；梅西状态火热但按错题本降档不追大胜）",
+      "key_players": "Lionel Messi、Lautaro Martínez（阿根廷）；Vozinha、Ryan Mendes（佛得角）",
+      "recent_form": "阿根廷小组赛三连胜，进 8 失 1；佛得角三场平局，仅丢 2 球",
+      "stay_up_index": 4,
+      "one_liner": "卫冕冠军 vs 首次晋级新军：佛得角低位铁桶能否再演西班牙式零封？"
+    },
+    {
+      "date": "2026-07-03",
+      "home": "哥伦比亚",
+      "away": "加纳",
+      "group": "1/16",
+      "beijing_time": "07/04 09:30",
+      "beijing_date": "2026-07-04",
+      "status": "scheduled",
+      "source": "https://sports.yahoo.com/soccer/article/2026-fifa-world-cup-daily-schedule-every-match-date-kickoff-time-and-venue-for-all-48-teams-234515087.html",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "哥伦比亚 ~65.6% / 加纳 34.38%（Opta 超级计算机，按加纳晋级概率反推）",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "1-0（四票主胜，风险官看平；J罗+迪亚斯破加纳低位，比分守稳）",
+      "key_players": "James Rodríguez、Luis Díaz（哥伦比亚）；Thomas Partey、Benjamin Asare（加纳）",
+      "recent_form": "哥伦比亚小组赛 3-1 乌兹别克斯坦、1-0 刚果（金）、0-0 葡萄牙；加纳 1-0 巴拿马、0-0 英格兰、1-2 克罗地亚",
+      "stay_up_index": 2,
+      "one_liner": "J 罗带队迎战黑星铁桶，加纳缺少库杜斯但防守韧性已逼平英格兰"
     }
   ]
 }
