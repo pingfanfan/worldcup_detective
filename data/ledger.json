@@ -12,7 +12,7 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 53,
+      "hit": 62,
       "miss": 18
     },
     "kimi_official": {
@@ -20,12 +20,12 @@
       "miss": 0
     },
     "opta": {
-      "hit": 25,
+      "hit": 34,
       "miss": 8
     },
     "coin_flip": {
-      "hit": 23,
-      "miss": 45
+      "hit": 27,
+      "miss": 50
     }
   },
   "token_account": {
@@ -107,6 +107,12 @@
         "match": "西班牙 vs 奥地利",
         "team": "西班牙",
         "status": "hit"
+      },
+      {
+        "date": "2026-07-03",
+        "match": "阿根廷 vs 佛得角",
+        "team": "阿根廷",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
@@ -116,7 +122,7 @@
       "date": "2026-07-03",
       "match": "阿根廷 vs 佛得角",
       "team": "阿根廷",
-      "status": "pending"
+      "status": "hit"
     }
   },
   "matches": [
@@ -2894,7 +2900,7 @@
       "beijing_time": "07/03 03:00",
       "beijing_date": "2026-07-03",
       "status": "finished",
-      "source": "https://www.chinanews.com.cn/ty/2026/07-03/10651786.shtml",
+      "source": "https://indianexpress.com/article/sports/football/spain-vs-austria-national-football-teams-live-score-fifa-world-cup-2026-round-of-32-match-timeline-lineups-commentary-updates-10768436/",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -2936,7 +2942,7 @@
       "beijing_time": "07/03 07:00",
       "beijing_date": "2026-07-03",
       "status": "finished",
-      "source": "https://www.khaspress.com/2026/07/fifa-world-cup-2026-portugal-vs-croatia-match-results-highlights/",
+      "source": "https://indianexpress.com/article/sports/football/portugal-vs-croatia-fifa-world-cup-2026-live-score-round-of-16-qualifier-football-match-lineups-commentary-updates-10768843/",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -2978,7 +2984,7 @@
       "beijing_time": "07/03 11:00",
       "beijing_date": "2026-07-03",
       "status": "finished",
-      "source": "https://www.163.com/dy/article/L0TQF9LH053469LG.html",
+      "source": "https://www.vavel.com/en-us/soccer/2026/07/03/1264892-switzerland-vs-algeria-live-score-2026-fifa-world-cup.html",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3019,8 +3025,8 @@
       "group": "1/16",
       "beijing_time": "07/04 02:00",
       "beijing_date": "2026-07-04",
-      "status": "scheduled",
-      "source": "https://sports.yahoo.com/soccer/article/2026-fifa-world-cup-daily-schedule-every-match-date-kickoff-time-and-venue-for-all-48-teams-234515087.html",
+      "status": "finished",
+      "source": "https://olympics.com/en/news/fifa-world-cup-2026-australia-vs-egypt-round-of-32-score-lineups-live-updates",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3041,7 +3047,14 @@
       "key_players": "Mathew Ryan、Nestory Irankunda（澳大利亚）；Mohamed Salah、Omar Marmoush（埃及）",
       "recent_form": "澳大利亚小组赛 2-0 土耳其、0-2 美国、0-0 巴拉圭；埃及 1-1 比利时、3-1 新西兰、1-1 伊朗",
       "stay_up_index": 5,
-      "one_liner": "法老王萨拉赫腿筋成疑 vs 袋鼠低位铁桶，本轮最势均力敌的 1/16 决赛"
+      "one_liner": "法老王萨拉赫腿筋成疑 vs 袋鼠低位铁桶，本轮最势均力敌的 1/16 决赛",
+      "score": "1-1（点球 2-4，埃及晋级）",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
     },
     {
       "date": "2026-07-03",
@@ -3050,8 +3063,8 @@
       "group": "1/16",
       "beijing_time": "07/04 06:00",
       "beijing_date": "2026-07-04",
-      "status": "scheduled",
-      "source": "https://sports.yahoo.com/soccer/article/2026-fifa-world-cup-daily-schedule-every-match-date-kickoff-time-and-venue-for-all-48-teams-234515087.html",
+      "status": "finished",
+      "source": "https://indianexpress.com/article/sports/football/argentina-vs-cape-verde-fifa-world-cup-2026-live-score-round-of-16-qualifier-football-match-lineups-commentary-updates-10770403/",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3072,7 +3085,14 @@
       "key_players": "Lionel Messi、Lautaro Martínez（阿根廷）；Vozinha、Ryan Mendes（佛得角）",
       "recent_form": "阿根廷小组赛三连胜，进 8 失 1；佛得角三场平局，仅丢 2 球",
       "stay_up_index": 4,
-      "one_liner": "卫冕冠军 vs 首次晋级新军：佛得角低位铁桶能否再演西班牙式零封？"
+      "one_liner": "卫冕冠军 vs 首次晋级新军：佛得角低位铁桶能否再演西班牙式零封？",
+      "score": "3-2（AET，90分钟 1-1）",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
     },
     {
       "date": "2026-07-03",
@@ -3081,8 +3101,8 @@
       "group": "1/16",
       "beijing_time": "07/04 09:30",
       "beijing_date": "2026-07-04",
-      "status": "scheduled",
-      "source": "https://sports.yahoo.com/soccer/article/2026-fifa-world-cup-daily-schedule-every-match-date-kickoff-time-and-venue-for-all-48-teams-234515087.html",
+      "status": "finished",
+      "source": "https://www.espn.com.au/football/match/_/gameId/760501/ghana-colombia",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3103,7 +3123,14 @@
       "key_players": "James Rodríguez、Luis Díaz（哥伦比亚）；Thomas Partey、Benjamin Asare（加纳）",
       "recent_form": "哥伦比亚小组赛 3-1 乌兹别克斯坦、1-0 刚果（金）、0-0 葡萄牙；加纳 1-0 巴拿马、0-0 英格兰、1-2 克罗地亚",
       "stay_up_index": 2,
-      "one_liner": "J 罗带队迎战黑星铁桶，加纳缺少库杜斯但防守韧性已逼平英格兰"
+      "one_liner": "J 罗带队迎战黑星铁桶，加纳缺少库杜斯但防守韧性已逼平英格兰",
+      "score": "1-0",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
     }
   ]
 }
