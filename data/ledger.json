@@ -12,7 +12,7 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 62,
+      "hit": 65,
       "miss": 18
     },
     "kimi_official": {
@@ -20,12 +20,12 @@
       "miss": 0
     },
     "opta": {
-      "hit": 34,
+      "hit": 37,
       "miss": 8
     },
     "coin_flip": {
-      "hit": 27,
-      "miss": 50
+      "hit": 29,
+      "miss": 51
     }
   },
   "token_account": {
@@ -113,16 +113,22 @@
         "match": "阿根廷 vs 佛得角",
         "team": "阿根廷",
         "status": "hit"
+      },
+      {
+        "date": "2026-07-05",
+        "match": "巴西 vs 挪威",
+        "team": "巴西",
+        "status": "pending"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-07-03",
-      "match": "阿根廷 vs 佛得角",
-      "team": "阿根廷",
-      "status": "hit"
+      "date": "2026-07-05",
+      "match": "巴西 vs 挪威",
+      "team": "巴西",
+      "status": "pending"
     }
   },
   "matches": [
@@ -3130,6 +3136,66 @@
         "opta": "hit",
         "kimi_official": "n/a",
         "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-07-04",
+      "home": "加拿大",
+      "away": "摩洛哥",
+      "group": "1/8",
+      "beijing_time": "07/05 01:00",
+      "beijing_date": "2026-07-05",
+      "status": "finished",
+      "score": "0-3",
+      "source": "https://www.sbnation.com/soccer/1121525/2026-world-cup-round-of-16-scores-schedule",
+      "predictions": {
+        "my_swarm": {
+          "note": "赛后录入，未做赛前投票"
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "待确认"
+      },
+      "score_pred": "实际 0-3（摩洛哥客场完胜东道主）",
+      "key_players": "阿方索·戴维斯、乔纳森·戴维（加拿大）；阿什拉夫·哈基米、尤瑟夫·恩-内斯里、索菲扬·阿姆拉巴特（摩洛哥）",
+      "recent_form": "加拿大 1/16 决赛 1-0 南非，小组赛 2-1 墨西哥、0-1 瑞士、6-0 卡塔尔；摩洛哥 1/16 点球淘汰荷兰，小组赛 4-2 海地、1-1 巴西、0-1 苏格兰",
+      "stay_up_index": 5,
+      "one_liner": "东道主加拿大迎战 2022 四强摩洛哥，阿什拉夫 vs 戴维斯边路对决",
+      "result_check": {
+        "my_swarm": "n/a",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "n/a"
+      }
+    },
+    {
+      "date": "2026-07-04",
+      "home": "巴拉圭",
+      "away": "法国",
+      "group": "1/8",
+      "beijing_time": "07/05 05:00",
+      "beijing_date": "2026-07-05",
+      "status": "finished",
+      "score": "0-1",
+      "source": "https://www.sbnation.com/soccer/1121525/2026-world-cup-round-of-16-scores-schedule",
+      "predictions": {
+        "my_swarm": {
+          "note": "赛后录入，未做赛前投票"
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "待确认"
+      },
+      "score_pred": "实际 0-1（法国小胜淘汰黑马巴拉圭）",
+      "key_players": "胡里奥·恩西索、米格尔·阿尔米隆（巴拉圭）；基利安·姆巴佩、奥斯曼·登贝莱、奥雷利安·琼阿梅尼（法国）",
+      "recent_form": "巴拉圭 1/16 点球淘汰德国，小组赛 0-2 美国、1-0 土耳其、0-0 澳大利亚；法国 1/16 3-0 瑞典，小组赛 3-1 塞内加尔、3-0 伊拉克、2-1 挪威",
+      "stay_up_index": 5,
+      "one_liner": "黑马巴拉圭能否再演点球奇迹？姆巴佩冲击方丹单届纪录",
+      "result_check": {
+        "my_swarm": "n/a",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "n/a"
       }
     }
   ]
