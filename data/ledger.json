@@ -118,6 +118,12 @@
         "date": "2026-07-05",
         "match": "巴西 vs 挪威",
         "team": "巴西",
+        "status": "miss"
+      },
+      {
+        "date": "2026-07-06",
+        "match": "葡萄牙 vs 西班牙",
+        "team": "西班牙",
         "status": "pending"
       }
     ],
@@ -125,9 +131,9 @@
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-07-05",
-      "match": "巴西 vs 挪威",
-      "team": "巴西",
+      "date": "2026-07-06",
+      "match": "葡萄牙 vs 西班牙",
+      "team": "西班牙",
       "status": "pending"
     }
   },
@@ -3191,6 +3197,82 @@
       "recent_form": "巴拉圭 1/16 点球淘汰德国，小组赛 0-2 美国、1-0 土耳其、0-0 澳大利亚；法国 1/16 3-0 瑞典，小组赛 3-1 塞内加尔、3-0 伊拉克、2-1 挪威",
       "stay_up_index": 5,
       "one_liner": "黑马巴拉圭能否再演点球奇迹？姆巴佩冲击方丹单届纪录",
+      "result_check": {
+        "my_swarm": "n/a",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "n/a"
+      }
+    },
+    {
+      "date": "2026-07-05",
+      "home": "巴西",
+      "away": "挪威",
+      "score": "1-2",
+      "group": "1/8",
+      "beijing_time": "07/06 04:00",
+      "beijing_date": "2026-07-06",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/report/_/gameId/760504",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "客队胜",
+            "风险官": "平"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "待确认"
+      },
+      "score_pred": "实际 1-2（赛后录入，无赛前投票）",
+      "key_players": "维尼修斯、恩德里克（巴西）；哈兰德、厄德高、尼兰（挪威）",
+      "recent_form": "巴西小组赛1-1摩洛哥、3-0海地、3-0苏格兰，1/16决赛2-1日本；挪威小组赛4-1伊拉克、3-2塞内加尔、1-4法国，1/16决赛2-1科特迪瓦",
+      "stay_up_index": 5,
+      "one_liner": "哈兰德 79'/90' 双响+尼兰扑点，挪威 28 年来首进八强",
+      "result_check": {
+        "my_swarm": "n/a",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "n/a"
+      }
+    },
+    {
+      "date": "2026-07-05",
+      "home": "墨西哥",
+      "away": "英格兰",
+      "score": "2-3",
+      "group": "1/8",
+      "beijing_time": "07/06 08:00",
+      "beijing_date": "2026-07-06",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/report/_/gameId/760505",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "客队胜",
+            "舆情": "客队胜",
+            "风险官": "平"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "待确认"
+      },
+      "score_pred": "实际 2-3（赛后录入，无赛前投票）",
+      "key_players": "基尼奥内斯、希门内斯（墨西哥）；贝林厄姆、凯恩、皮克福德（英格兰）",
+      "recent_form": "墨西哥小组赛2-0南非、1-0韩国、3-0捷克，1/16决赛2-0厄瓜多尔；英格兰小组赛4-2克罗地亚、0-0加纳、2-0巴拿马，1/16决赛2-1刚果（金）",
+      "stay_up_index": 5,
+      "one_liner": "贝林厄姆 98 秒两球，英格兰 10 人顶住东道主反扑",
       "result_check": {
         "my_swarm": "n/a",
         "opta": "n/a",
