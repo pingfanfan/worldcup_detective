@@ -124,14 +124,14 @@
         "date": "2026-07-06",
         "match": "葡萄牙 vs 西班牙",
         "team": "西班牙",
-        "status": "pending"
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-07-06",
+      "date": "2026-07-07",
       "match": "葡萄牙 vs 西班牙",
       "team": "西班牙",
       "status": "pending"
@@ -3279,6 +3279,68 @@
         "kimi_official": "n/a",
         "coin_flip": "n/a"
       }
+    },
+    {
+      "date": "2026-07-06",
+      "home": "葡萄牙",
+      "away": "西班牙",
+      "group": "1/8",
+      "beijing_time": "07/07 03:00",
+      "beijing_date": "2026-07-07",
+      "status": "scheduled",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "主队胜",
+            "舆情": "客队胜",
+            "风险官": "平"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "西班牙 48.6% / 葡萄牙 25.6% / 平 25.8%（Opta/The Analyst，来源：伤病观察员引述）",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "0-1（数据/战术/舆情看西班牙小胜，风险官看平，伤病看葡萄牙）",
+      "key_players": "亚马尔、奥亚萨瓦尔（西班牙）；B费、C罗（葡萄牙）",
+      "recent_form": "西班牙本届4场零封，3-0奥地利；葡萄牙2-1克罗地亚晋级，对哥伦比亚仅1射正",
+      "stay_up_index": 5,
+      "one_liner": "伊比利亚德比：C罗最后一舞 vs 亚马尔新王登基，西班牙控场占优但葡萄牙全员健康"
+    },
+    {
+      "date": "2026-07-06",
+      "home": "美国",
+      "away": "比利时",
+      "group": "1/8",
+      "beijing_time": "07/07 08:00",
+      "beijing_date": "2026-07-07",
+      "status": "scheduled",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "主队胜"
+          },
+          "final": "主队胜",
+          "split": false
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "2-1（五人会诊一致看好美国，巴洛贡解禁+主场是最大变量）",
+      "key_players": "普利西奇、巴洛贡（美国）；德布劳内、卢卡库（比利时）",
+      "recent_form": "美国4战3胜，2-0波黑；比利时1/16加时3-2塞内加尔，小组赛对埃及/伊朗均未90分钟取胜",
+      "stay_up_index": 4,
+      "one_liner": "东道主主场+巴洛贡解禁，面对比利时老化中轴能否复刻摩洛哥式冷门？"
     }
   ]
 }
