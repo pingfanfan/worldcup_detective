@@ -12,20 +12,20 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 66,
-      "miss": 18
+      "hit": 67,
+      "miss": 19
     },
     "kimi_official": {
       "hit": 0,
       "miss": 0
     },
     "opta": {
-      "hit": 38,
-      "miss": 8
+      "hit": 39,
+      "miss": 9
     },
     "coin_flip": {
-      "hit": 30,
-      "miss": 52
+      "hit": 31,
+      "miss": 53
     }
   },
   "token_account": {
@@ -131,15 +131,21 @@
         "match": "葡萄牙 vs 西班牙",
         "team": "西班牙",
         "status": "hit"
+      },
+      {
+        "date": "2026-07-08",
+        "match": "阿根廷 vs 埃及",
+        "team": "阿根廷",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-07-08",
-      "match": "阿根廷 vs 埃及",
-      "team": "阿根廷",
+      "date": "2026-07-09",
+      "match": "法国 vs 摩洛哥",
+      "team": "法国",
       "status": "pending"
     }
   },
@@ -3370,8 +3376,9 @@
       "group": "1/8",
       "beijing_time": "07/08 00:00",
       "beijing_date": "2026-07-08",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "score": "3-2",
+      "source": "https://worldcup.ekantipur.com/match/935（Full-time: Argentina 3–2 Egypt）",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3392,18 +3399,24 @@
       "key_players": "梅西、阿尔瓦雷斯（阿根廷）；萨拉赫、马尔穆什（埃及）",
       "recent_form": "阿根廷小组赛3-0阿尔及利亚、2-0奥地利、3-1约旦，1/32决赛加时3-2佛得角；埃及小组赛1-1比利时、3-1新西兰、1-1伊朗，1/32决赛点球淘汰澳大利亚",
       "stay_up_index": 5,
-      "one_liner": "梅西第八球纪录之夜？阿根廷刚踢满120分钟疲劳+埃及低位铁桶，卫冕冠军难大胜"
+      "one_liner": "梅西第八球纪录之夜？阿根廷刚踢满120分钟疲劳+埃及低位铁桶，卫冕冠军难大胜",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
     },
     {
       "date": "2026-07-07",
       "home": "瑞士",
       "away": "哥伦比亚",
-      "score": "",
+      "score": "0-0（点球 4-3，瑞士晋级）",
       "group": "1/8",
       "beijing_time": "07/08 04:00",
       "beijing_date": "2026-07-08",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://worldcup.ekantipur.com/match/915（Full-time: Switzerland 0–0 Colombia; Switzerland win 4–3 on penalties）",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3424,7 +3437,45 @@
       "key_players": "恩博洛、扎卡（瑞士）；路易斯·迪亚斯、J罗（哥伦比亚）",
       "recent_form": "瑞士小组赛1-1卡塔尔、4-1波黑、2-1加拿大，1/32决赛2-0阿尔及利亚；哥伦比亚小组赛3-1乌兹别克斯坦、1-0刚果（金）、0-0葡萄牙，1/32决赛1-0加纳",
       "stay_up_index": 4,
-      "one_liner": "哥伦比亚防线本届仅丢1球但主力中锋科尔多瓦报销，瑞士缺Manzambi，低比分消耗战看迪亚斯"
+      "one_liner": "哥伦比亚防线本届仅丢1球但主力中锋科尔多瓦报销，瑞士缺Manzambi，低比分消耗战看迪亚斯",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "miss",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-07-09",
+      "home": "法国",
+      "away": "摩洛哥",
+      "score": "",
+      "group": "1/4",
+      "beijing_time": "07/10 04:00",
+      "beijing_date": "2026-07-10",
+      "status": "scheduled",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "法国 61.7% / 平 22.1% / 摩洛哥 16.2%（Opta/The Analyst，来源：https://theanalyst.com/articles/france-vs-morocco-prediction-world-cup-2026-match-preview）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "1-0（四票看法国小胜，风险官看平；淘汰赛低比分常态，摩洛哥34场不败+低位铁桶）",
+      "key_players": "姆巴佩、登贝莱、奥利塞（法国）；阿什拉夫、欧纳希、布努（摩洛哥）",
+      "recent_form": "法国本届6战6胜进17失2；摩洛哥近34场国际赛不败，本届对巴西/荷兰90分钟不败、3-0加拿大",
+      "stay_up_index": 5,
+      "one_liner": "2022半决赛重演：法国破密集攻坚 vs 摩洛哥34场不败低位铁桶+布努点球经验"
     }
   ]
 }
