@@ -12,7 +12,7 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 67,
+      "hit": 68,
       "miss": 19
     },
     "kimi_official": {
@@ -20,11 +20,11 @@
       "miss": 0
     },
     "opta": {
-      "hit": 39,
+      "hit": 40,
       "miss": 9
     },
     "coin_flip": {
-      "hit": 31,
+      "hit": 32,
       "miss": 53
     }
   },
@@ -146,7 +146,7 @@
       "date": "2026-07-09",
       "match": "法国 vs 摩洛哥",
       "team": "法国",
-      "status": "pending"
+      "status": "hit"
     }
   },
   "matches": [
@@ -3449,12 +3449,12 @@
       "date": "2026-07-09",
       "home": "法国",
       "away": "摩洛哥",
-      "score": "",
+      "score": "2-0",
       "group": "1/4",
       "beijing_time": "07/10 04:00",
       "beijing_date": "2026-07-10",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/match/_/gameId/760510/morocco-france（比分来源：https://worldcup.ekantipur.com/match/985/stats）",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3475,7 +3475,45 @@
       "key_players": "姆巴佩、登贝莱、奥利塞（法国）；阿什拉夫、欧纳希、布努（摩洛哥）",
       "recent_form": "法国本届6战6胜进17失2；摩洛哥近34场国际赛不败，本届对巴西/荷兰90分钟不败、3-0加拿大",
       "stay_up_index": 5,
-      "one_liner": "2022半决赛重演：法国破密集攻坚 vs 摩洛哥34场不败低位铁桶+布努点球经验"
+      "one_liner": "2022半决赛重演：法国破密集攻坚 vs 摩洛哥34场不败低位铁桶+布努点球经验",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-07-10",
+      "home": "西班牙",
+      "away": "比利时",
+      "score": "",
+      "group": "1/4",
+      "beijing_time": "07/11 03:00",
+      "beijing_date": "2026-07-11",
+      "status": "scheduled",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "客队胜"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "西班牙 59.3% / 平 22.4% / 比利时 18.3%（Opta/The Analyst，来源：https://theanalyst.com/articles/spain-vs-belgium-prediction-world-cup-2026-match-preview）",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "1-0（四票看西班牙小胜，风险官看比利时 0-1；淘汰赛低比分常态）",
+      "key_players": "Rodri、Pedri、Lamine Yamal、Oyarzabal（西班牙）；De Bruyne、De Ketelaere、Doku、Courtois（比利时）",
+      "recent_form": "西班牙本届5场0失球，连续6场世界杯零封，1/8决赛1-0葡萄牙；比利时小组赛后3场进12球，1/8决赛4-1美国",
+      "stay_up_index": 5,
+      "one_liner": "西班牙零封滤镜 vs 比利时转换爆点：2026世界杯八强最悬殊的控制流对决"
     }
   ]
 }
