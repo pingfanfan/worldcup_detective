@@ -12,7 +12,7 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 68,
+      "hit": 70,
       "miss": 19
     },
     "kimi_official": {
@@ -20,11 +20,11 @@
       "miss": 0
     },
     "opta": {
-      "hit": 40,
+      "hit": 42,
       "miss": 9
     },
     "coin_flip": {
-      "hit": 32,
+      "hit": 34,
       "miss": 53
     }
   },
@@ -3487,12 +3487,12 @@
       "date": "2026-07-10",
       "home": "西班牙",
       "away": "比利时",
-      "score": "",
+      "score": "2-1",
       "group": "1/4",
       "beijing_time": "07/11 03:00",
       "beijing_date": "2026-07-11",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/match/_/gameId/760511/belgium-spain；进球：Fabian Ruiz 30'、Charles De Ketelaere 41'、Mikel Merino 88'（来源：https://sports.yahoo.com/soccer/live/world-cup-bracket-schedule-scores-results-live-updates-quarterfinals-203257966.html）",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3513,7 +3513,77 @@
       "key_players": "Rodri、Pedri、Lamine Yamal、Oyarzabal（西班牙）；De Bruyne、De Ketelaere、Doku、Courtois（比利时）",
       "recent_form": "西班牙本届5场0失球，连续6场世界杯零封，1/8决赛1-0葡萄牙；比利时小组赛后3场进12球，1/8决赛4-1美国",
       "stay_up_index": 5,
-      "one_liner": "西班牙零封滤镜 vs 比利时转换爆点：2026世界杯八强最悬殊的控制流对决"
+      "one_liner": "西班牙零封滤镜 vs 比利时转换爆点：2026世界杯八强最悬殊的控制流对决",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "hit",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
+    },
+    {
+      "date": "2026-07-11",
+      "home": "挪威",
+      "away": "英格兰",
+      "score": "",
+      "group": "1/4",
+      "beijing_time": "07/12 05:00",
+      "beijing_date": "2026-07-12",
+      "status": "scheduled",
+      "source": "https://www.fox.com/soccer/fifa-world-cup/norway-vs-england-jul-11-2026（北京时间 07/12 05:00）",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "客队胜",
+            "战术": "客队胜",
+            "伤病": "主队胜",
+            "舆情": "客队胜",
+            "风险官": "主队胜"
+          },
+          "final": "客队胜",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "1-2（四票看英格兰小胜，伤病/风险官看挪威；比分守稳，预留加时/点球尾部）",
+      "key_players": "哈兰德、厄德高、尼兰（挪威）；凯恩、贝林厄姆、萨卡（英格兰）",
+      "recent_form": "挪威本届5战4胜1负进12失9，1/8决赛2-1淘汰巴西；英格兰本届5战4胜1负进11失5，1/8决赛3-2淘汰墨西哥",
+      "stay_up_index": 5,
+      "one_liner": "哈兰德能否再演巴西式冷门？英格兰残阵防线迎接北欧风暴"
+    },
+    {
+      "date": "2026-07-11",
+      "home": "阿根廷",
+      "away": "瑞士",
+      "score": "",
+      "group": "1/4",
+      "beijing_time": "07/12 09:00",
+      "beijing_date": "2026-07-12",
+      "status": "scheduled",
+      "source": "https://www.fox.com/soccer/fifa-world-cup/argentina-vs-switzerland-jul-11-2026（北京时间 07/12 09:00）",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "平",
+            "舆情": "主队胜",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认",
+        "kimi_official": "待确认",
+        "coin_flip": "主队胜"
+      },
+      "score_pred": "1-0 或 1-1（四票看阿根廷小胜，伤病/风险官看平；淘汰赛低比分常态，瑞士低位铁桶）",
+      "key_players": "梅西、阿尔瓦雷斯、恩佐（阿根廷）；Kobel、Xhaka、Akanji、Embolo（瑞士）",
+      "recent_form": "阿根廷本届5战全胜进14失5，对佛得角/埃及均苦战；瑞士本届5战3胜2平进9失3，1/8决赛点球淘汰哥伦比亚",
+      "stay_up_index": 5,
+      "one_liner": "梅西最后一舞 vs 瑞士低位铁桶：卫冕冠军能否90分钟解决战斗"
     }
   ]
 }
