@@ -12,7 +12,7 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 70,
+      "hit": 72,
       "miss": 19
     },
     "kimi_official": {
@@ -24,7 +24,7 @@
       "miss": 9
     },
     "coin_flip": {
-      "hit": 34,
+      "hit": 36,
       "miss": 53
     }
   },
@@ -137,15 +137,27 @@
         "match": "阿根廷 vs 埃及",
         "team": "阿根廷",
         "status": "hit"
+      },
+      {
+        "date": "2026-07-09",
+        "match": "法国 vs 摩洛哥",
+        "team": "法国",
+        "status": "hit"
+      },
+      {
+        "date": "2026-07-12",
+        "match": "阿根廷 vs 瑞士",
+        "team": "阿根廷",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-07-09",
-      "match": "法国 vs 摩洛哥",
-      "team": "法国",
+      "date": "2026-07-12",
+      "match": "阿根廷 vs 瑞士",
+      "team": "阿根廷",
       "status": "hit"
     }
   },
@@ -3525,12 +3537,12 @@
       "date": "2026-07-11",
       "home": "挪威",
       "away": "英格兰",
-      "score": "",
+      "score": "1-2（AET，90分钟1-1）",
       "group": "1/4",
       "beijing_time": "07/12 05:00",
       "beijing_date": "2026-07-12",
-      "status": "scheduled",
-      "source": "https://www.fox.com/soccer/fifa-world-cup/norway-vs-england-jul-11-2026（北京时间 07/12 05:00）",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/match/_/gameId/760512/norway-england（Full-time: Norway 1–2 England, AET; Bellingham 93' winner）",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3551,18 +3563,24 @@
       "key_players": "哈兰德、厄德高、尼兰（挪威）；凯恩、贝林厄姆、萨卡（英格兰）",
       "recent_form": "挪威本届5战4胜1负进12失9，1/8决赛2-1淘汰巴西；英格兰本届5战4胜1负进11失5，1/8决赛3-2淘汰墨西哥",
       "stay_up_index": 5,
-      "one_liner": "哈兰德能否再演巴西式冷门？英格兰残阵防线迎接北欧风暴"
+      "one_liner": "哈兰德能否再演巴西式冷门？英格兰残阵防线迎接北欧风暴",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
     },
     {
       "date": "2026-07-11",
       "home": "阿根廷",
       "away": "瑞士",
-      "score": "",
+      "score": "3-1（AET，90分钟1-1）",
       "group": "1/4",
       "beijing_time": "07/12 09:00",
       "beijing_date": "2026-07-12",
-      "status": "scheduled",
-      "source": "https://www.fox.com/soccer/fifa-world-cup/argentina-vs-switzerland-jul-11-2026（北京时间 07/12 09:00）",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/match/_/gameId/760513/switzerland-argentina（Full-time: Argentina 3–1 Switzerland, AET; 90' 1–1）",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3583,7 +3601,13 @@
       "key_players": "梅西、阿尔瓦雷斯、恩佐（阿根廷）；Kobel、Xhaka、Akanji、Embolo（瑞士）",
       "recent_form": "阿根廷本届5战全胜进14失5，对佛得角/埃及均苦战；瑞士本届5战3胜2平进9失3，1/8决赛点球淘汰哥伦比亚",
       "stay_up_index": 5,
-      "one_liner": "梅西最后一舞 vs 瑞士低位铁桶：卫冕冠军能否90分钟解决战斗"
+      "one_liner": "梅西最后一舞 vs 瑞士低位铁桶：卫冕冠军能否90分钟解决战斗",
+      "result_check": {
+        "my_swarm": "hit",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
     }
   ]
 }
