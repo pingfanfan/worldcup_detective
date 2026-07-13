@@ -12,7 +12,7 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 72,
+      "hit": 74,
       "miss": 19
     },
     "kimi_official": {
@@ -24,7 +24,7 @@
       "miss": 9
     },
     "coin_flip": {
-      "hit": 36,
+      "hit": 38,
       "miss": 53
     }
   },
@@ -3384,12 +3384,11 @@
       "date": "2026-07-07",
       "home": "阿根廷",
       "away": "埃及",
-      "score": "",
+      "score": "3-2",
       "group": "1/8",
       "beijing_time": "07/08 00:00",
       "beijing_date": "2026-07-08",
       "status": "finished",
-      "score": "3-2",
       "source": "https://worldcup.ekantipur.com/match/935（Full-time: Argentina 3–2 Egypt）",
       "predictions": {
         "my_swarm": {
@@ -3608,6 +3607,68 @@
         "kimi_official": "n/a",
         "coin_flip": "hit"
       }
+    },
+    {
+      "date": "2026-07-14",
+      "home": "法国",
+      "away": "西班牙",
+      "group": "半决赛",
+      "beijing_time": "07/15 03:00",
+      "beijing_date": "2026-07-15",
+      "status": "scheduled",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "平",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "客队胜"
+          },
+          "final": "主队胜",
+          "split": false
+        },
+        "opta": "法国晋级 57.7% / 西班牙晋级 42.3%（Opta 超级计算机，来源：https://www.si.com/soccer/supercomputer-predicts-2026-world-cup-winner-after-thrilling-quarterfinals）",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "1-0 或 2-1（四票看法国不败/小胜，风险官唱反调；半决赛低比分常态，加时/点球尾部概率 40%+）",
+      "key_players": "姆巴佩、登贝莱、奥利塞（法国）；亚马尔、奥亚萨瓦尔、罗德里（西班牙）",
+      "recent_form": "法国本届6战6胜进16失2，淘汰赛3场零封；西班牙本届6战5胜1平进11失1，前4场零封",
+      "stay_up_index": 5,
+      "one_liner": "提前上演的决赛：法国转换火力 vs 西班牙控球铁桶，姆巴佩与亚马尔新王旧王对决"
+    },
+    {
+      "date": "2026-07-15",
+      "home": "英格兰",
+      "away": "阿根廷",
+      "group": "半决赛",
+      "beijing_time": "07/16 03:00",
+      "beijing_date": "2026-07-16",
+      "status": "scheduled",
+      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "客队胜",
+            "舆情": "平",
+            "风险官": "客队胜"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "英格兰晋级 50.9% / 阿根廷晋级 49.6%（Opta 超级计算机，来源：https://www.si.com/soccer/supercomputer-predicts-2026-world-cup-winner-after-thrilling-quarterfinals）",
+        "kimi_official": "待确认",
+        "coin_flip": "平"
+      },
+      "score_pred": "1-1 或 1-0（数据/战术看英格兰小胜，伤病/风险官看阿根廷，舆情看平；五五开局，加时/点球尾部概率 45%+）",
+      "key_players": "凯恩、贝林厄姆（英格兰）；梅西、阿尔瓦雷斯、恩佐（阿根廷）",
+      "recent_form": "英格兰本届6战4胜1平1负进13失6，连续3场淘汰赛苦战；阿根廷本届6战6胜进17失5，连续3场淘汰赛被拖入加时/落后逆转",
+      "stay_up_index": 5,
+      "one_liner": "梅西最后一舞 vs 三狮军团：两队都踢满120分钟，体能与巨星时刻决定决赛门票"
     }
   ]
 }
