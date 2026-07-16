@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界杯 AI 球探日报</title>
+<style>
+  :root{
+    --bg:#080c11; --card:#111922; --card2:#0e151d; --line:#1d2935; --ink:#e9f0f7;
+    --muted:#7d8b9c; --accent:#22d3a8; --accent2:#3ba3ff;
+    --warn:#ffb454; --danger:#ff5d6c; --win:#22d3a8; --draw:#8b95a3; --lose:#ff7a45;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(1200px 600px at 50% -10%,#0e1a16 0%,var(--bg) 55%);
+    color:var(--ink);font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    line-height:1.55;padding:22px;max-width:600px;margin:0 auto}
+
+  /* 顶栏 */
+  .top{display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:16px}
+  .top h1{font-size:21px;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+  .top .tag{font-size:10px;color:var(--accent);border:1px solid var(--accent);
+    border-radius:4px;padding:1px 6px;font-weight:600}
+  .top .meta{color:var(--muted);font-size:12px;text-align:right}
+
+  /* 记分牌 */
+  .scoreboard{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px}
+  .sb{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 6px;text-align:center}
+  .sb.lead{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+  .sb .who{font-size:10.5px;color:var(--muted);margin-bottom:3px}
+  .sb .rec{font-size:15px;font-weight:800}
+  .sb .rate{font-size:10.5px;color:var(--accent)}
+  .ticker{font-size:11px;color:var(--muted);text-align:center;margin-bottom:18px}
+
+  h2{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;
+    margin:22px 0 10px;display:flex;align-items:center;gap:8px}
+  h2::before{content:"";width:3px;height:13px;background:var(--accent);border-radius:2px}
+
+  /* 复盘 */
+  .recap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .recap .row{display:flex;justify-content:space-between;padding:9px 13px;border-bottom:1px solid var(--line);font-size:13.5px}
+  .recap .row:last-child{border-bottom:none}
+  .recap .sc{font-variant-numeric:tabular-nums;color:#cdd9e5}
+  .hit{color:var(--win)} .miss{color:var(--danger)}
+
+  /* 比赛卡片 */
+  .match{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
+    border-radius:13px;padding:14px;margin-bottom:11px}
+  .match .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .match .vs{font-size:16px;font-weight:800}
+  .match .grp{font-size:10px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 5px;margin-left:6px}
+  .match .time{font-size:12px;color:var(--accent2);font-variant-numeric:tabular-nums}
+  .match .stat{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:#bcc9d6;margin:4px 0 8px}
+  .match .stat b{color:var(--ink)}
+  .moon{letter-spacing:1px}
+  .match .take{font-size:12.5px;color:#cdd9e5;border-left:2px solid var(--accent);padding-left:8px;margin-top:6px}
+
+  /* 五人投票条 */
+  .votes{display:flex;gap:4px;margin-top:9px}
+  .vote{flex:1;text-align:center;font-size:9.5px;border-radius:6px;padding:5px 2px;border:1px solid var(--line)}
+  .vote .r{color:var(--muted);display:block;font-size:9px;margin-bottom:2px}
+  .vote .v{font-weight:700}
+  .vote.win{background:rgba(34,211,168,.12);border-color:rgba(34,211,168,.4)}
+  .vote.win .v{color:var(--win)}
+  .vote.draw{background:rgba(139,149,163,.12)} .vote.draw .v{color:var(--draw)}
+  .vote.lose{background:rgba(255,122,69,.12);border-color:rgba(255,122,69,.35)} .vote.lose .v{color:var(--lose)}
+  .split{font-size:10px;color:var(--warn);margin-top:6px}
+
+  /* 五人会诊面板 */
+  .panel{background:#0c1712;border:1px solid #1b3a2c;border-radius:12px;padding:13px;margin-bottom:11px}
+  .panel .role{display:flex;gap:9px;font-size:12.5px;margin:7px 0;align-items:baseline}
+  .panel .role b{color:var(--accent);min-width:74px;display:inline-block;flex-shrink:0}
+  .panel .role span{color:#cdd9e5}
+
+  /* 读图块 */
+  .vision{background:var(--card);border:1px dashed var(--accent2);border-radius:12px;padding:13px;margin-bottom:11px;font-size:12.5px;color:#cdd9e5}
+  .vision .lab{color:var(--accent2);font-weight:700;margin-bottom:5px;font-size:11px}
+
+  /* 站队 */
+  .pick{background:linear-gradient(135deg,#11241d,#0e2a33);border:1px solid var(--accent);
+    border-radius:13px;padding:16px;text-align:center;margin:8px 0}
+  .pick .label{font-size:11px;color:var(--muted)}
+  .pick .team{font-size:24px;font-weight:800;color:var(--accent);margin:4px 0}
+  .pick .why{font-size:12px;color:#cdd9e5}
+
+  footer{margin-top:24px;padding-top:14px;border-top:1px solid var(--line);
+    font-size:10.5px;color:var(--muted);text-align:center;line-height:1.9}
+  footer .disc{color:#5f6c7b}
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+
+  <div class="top">
+    <h1>⚽ AI 球探日报 <span class="tag">KIMI CODE 自动生成</span></h1>
+    <div class="meta">第 31 期<br>07月16日</div>
+  </div>
+
+  <div class="scoreboard">
+    <div class="sb "><div class="who">我的小分队</div><div class="rec">74胜21负</div><div class="rate">77.9%</div></div>
+    <div class="sb "><div class="who">Kimi官方</div><div class="rec">0胜0负</div><div class="rate">N/A</div></div>
+    <div class="sb lead"><div class="who">Opta超算</div><div class="rec">42胜11负</div><div class="rate">79.2%</div></div>
+    <div class="sb"><div class="who">抛硬币</div><div class="rec">38胜55负</div><div class="rate">40.9%</div></div>
+  </div>
+  <div class="ticker">截至 2026-07-16 · 决赛前间歇日 · 昨夜两场半决赛四方全灭 · Opta 79.2% 反超领跑</div>
+
+  <h2>昨夜复盘</h2>
+  <div class="recap">
+    <div class="row"><span class="sc">法国 0-2 西班牙（Oyarzabal 22'点、Porro 58'）</span><span class="miss">小分队 ❌ · Opta ❌ · 硬币 ❌</span></div>
+    <div class="row"><span class="sc">英格兰 1-2 阿根廷（Gordon 55' / Enzo 85'、Lautaro 90+2'）</span><span class="miss">小分队 ❌ · Opta ❌ · 硬币 ❌</span></div>
+    <div class="row"><span class="sc" style="color:var(--muted);font-size:12px">注：伤病观察员+风险官单人票两场全对（西班牙、阿根廷），多数票汇总机制待升级</span><span></span></div>
+  </div>
+
+  <h2>今日焦点 · 北京时间</h2>
+  <div class="match"><div class="take" style="border-left-color:var(--accent2)">今日北京时间无比赛（决赛前间歇日）。决赛对阵已确定：<b>西班牙 vs 阿根廷</b>（07/20 03:00），季军战 <b>法国 vs 英格兰</b>（07/19 05:00）。下方卡片为五人会诊赛前诊断。</div></div>
+
+  <div class="match">
+    <div class="head">
+      <span class="vs">西班牙 vs 阿根廷<span class="grp">🏆 决赛</span></span>
+      <span class="time">07/20 03:00</span>
+    </div>
+    <div class="stat">
+      <span><b>🌙</b><span class="moon">🌙🌙🌙🌙🌙</span> 熬夜5/5</span>
+      <span>比分预测 <b>1-0 / 2-1</b></span>
+      <span>关键 <b>亚马尔、罗德里 / 梅西、恩佐</b></span>
+    </div>
+    <div class="take">梅西最后一舞 vs 亚马尔新王登基：西班牙本届仅失1球+多休一天以逸待劳，阿根廷连续四场补时/加时绝杀油箱见底；近五届决赛四届90分钟打平，预留35%+加时/点球尾部。</div>
+    <div class="votes">
+      <div class="vote win"><span class="r">数据</span><span class="v">西</span></div>
+      <div class="vote win"><span class="r">战术</span><span class="v">西</span></div>
+      <div class="vote win"><span class="r">伤病</span><span class="v">西</span></div>
+      <div class="vote draw"><span class="r">舆情</span><span class="v">平</span></div>
+      <div class="vote draw"><span class="r">风险官</span><span class="v">平</span></div>
+    </div>
+    <div class="split">⚠ 五人有分歧：西班牙3票·平2票，最终多数票：西班牙胜</div>
+  </div>
+
+  <div class="match">
+    <div class="head">
+      <span class="vs">法国 vs 英格兰<span class="grp">🥉 季军战</span></span>
+      <span class="time">07/19 05:00</span>
+    </div>
+    <div class="stat">
+      <span><b>🌙</b><span class="moon">🌙🌙🌙🌙</span> 熬夜4/5</span>
+      <span>比分预测 <b>2-1</b></span>
+      <span>关键 <b>姆巴佩、登贝莱 / 凯恩、贝林厄姆</b></span>
+    </div>
+    <div class="take">心碎者联盟：法国完败但多休一天+姆巴佩刷金靴+德尚告别战；英格兰被90+2'绝杀+四连苦战透支+图赫尔纠错动机。近六届季军战90分钟无平局、场均约3球。</div>
+    <div class="votes">
+      <div class="vote win"><span class="r">数据</span><span class="v">法</span></div>
+      <div class="vote win"><span class="r">战术</span><span class="v">法</span></div>
+      <div class="vote win"><span class="r">伤病</span><span class="v">法</span></div>
+      <div class="vote win"><span class="r">舆情</span><span class="v">法</span></div>
+      <div class="vote lose"><span class="r">风险官</span><span class="v">英</span></div>
+    </div>
+    <div class="split">⚠ 五人有分歧：法国4票·英格兰1票（风险官反押），最终多数票：法国胜</div>
+  </div>
+
+  <h2>五人会诊摘要</h2>
+  <div class="panel">
+    <div class="role"><b>数据分析师</b><span>看西班牙 1-0：西班牙7场仅失1球、5场零封，半决赛把法国压到 xG 0.31；市场90分钟隐含西班牙41-44%/平33-35%/阿根廷26-28%。阿根廷19球火力更强，但四场淘汰赛三场90分钟未解决战斗。季军战看法国 2-1（净胜球+12 vs +6，多休一天）。</span></div>
+    <div class="role"><b>战术分析师</b><span>看西班牙 2-1：控球体系+零加时体能储备磨死疲劳阿根廷；但西班牙隐含~57%正中「小热门陷阱」区间，给梅西时间留35%尾部。季军战看法国 2-1：楚阿梅尼复出+板凳深度，针对英格兰残缺右后卫。</span></div>
+    <div class="role"><b>伤病观察员</b><span>看西班牙 2-1：双方零停赛（1/4后黄牌清零）；阿根廷真正的伤是油箱——连续四场补时/加时续命、梅西38岁场场打满、少休一天+跨城旅途，MetLife下午~31°C湿热放大体能差。季军战看法国 2-1：英格兰四连苦战+James/Rice半决赛被换下存疑。</span></div>
+    <div class="role"><b>舆情嘴替</b><span>看平 1-1：理性端「Spain are the best team in the world」vs 情绪端「梅西最后一舞·team of destiny」严重撕裂；英格兰已是「心碎冠军」，图赫尔遭鲁尼/默森围剿、"Sack him now"刷屏。季军战看法国 2-1：姆巴佩刷金靴硬动机。</span></div>
+    <div class="role"><b>风险官</b><span>看平 1-1：主流「捧杯」口径（Opta 56.15%）掩盖了90分钟三项盘西班牙仅~43%；近五届决赛四届90分钟打平，本届头号热门已全部阵亡。西班牙90分钟不胜概率58%。季军战反押英格兰 1-2：「差点赢」比「不会踢」更伤结构的说法不成立，图赫尔有纠错动机。</span></div>
+  </div>
+
+  <h2>📷 今日读图</h2>
+  <div class="vision">
+    <div class="lab">视觉理解（Kimi 模型本体能力）</div>
+    今天没有投喂图片。<code>assets/</code> 目录仅有旧的世界杯赛程截图，无新图可读。可以把决赛海报、赛程截图、战术示意图拖进 <code>assets/</code>，明天的日报会单开一块「📷 今日读图」展示视觉理解产物。
+  </div>
+
+  <h2>今日建议站队</h2>
+  <div class="pick">
+    <div class="label">去 Kimi Token Cup 支持</div>
+    <div class="team">西班牙（决赛 90分钟不败/捧杯）</div>
+    <div class="why">五人会诊 3-2 多数票看西班牙：本届仅失1球的体系压制+多休一天以逸待劳，对上连续四场补时/加时鏖战、油箱见底的阿根廷。但舆情与风险官看平，近五届决赛四届90分钟打平，且梅西状态在线——建议支持西班牙，比分守稳，介意平局口径可等决赛日再动手。仅供娱乐，不构成投注建议。</div>
+  </div>
+
+  <footer>
+    数据更新：2026-07-16 15:11 北京 · 各场来源已在 ledger.json 留痕<br>
+    <span class="disc">仅供娱乐与 AI 能力测评，不构成任何投注建议。</span><br>
+    由 Kimi Code 自动生成 · <a href="https://kimi.com/code">kimi.com/code</a>
+  </footer>
+
+</body>
+</html>

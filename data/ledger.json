@@ -13,7 +13,7 @@
   "tally": {
     "my_swarm": {
       "hit": 74,
-      "miss": 19
+      "miss": 21
     },
     "kimi_official": {
       "hit": 0,
@@ -21,11 +21,11 @@
     },
     "opta": {
       "hit": 42,
-      "miss": 9
+      "miss": 11
     },
     "coin_flip": {
       "hit": 38,
-      "miss": 53
+      "miss": 55
     }
   },
   "token_account": {
@@ -149,15 +149,21 @@
         "match": "阿根廷 vs 瑞士",
         "team": "阿根廷",
         "status": "hit"
+      },
+      {
+        "date": "2026-07-14",
+        "match": "法国 vs 西班牙",
+        "team": "西班牙不败（平局/客胜）",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
     "tokens_spent": 0,
     "note": "每天根据日报建议在 Kimi App Token Cup 手动选队；此处记录历史与收支",
     "daily_pick": {
-      "date": "2026-07-14",
-      "match": "法国 vs 西班牙",
-      "team": "西班牙不败（平局/客胜）",
+      "date": "2026-07-16",
+      "match": "西班牙 vs 阿根廷（决赛，北京 07/20 03:00）",
+      "team": "西班牙（90分钟不败/捧杯）",
       "status": "pending"
     }
   },
@@ -3612,11 +3618,12 @@
       "date": "2026-07-14",
       "home": "法国",
       "away": "西班牙",
+      "score": "0-2",
       "group": "半决赛",
       "beijing_time": "07/15 03:00",
       "beijing_date": "2026-07-15",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://www.espn.com/soccer/match/_/gameId/760514/spain-france（Oyarzabal 22'点球、Pedro Porro 58'；法国 xG 0.31 vs 西班牙 1.63；另见 https://fiido.com/blogs/news/2026-world-cup-schedule-07-15）",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3637,17 +3644,24 @@
       "key_players": "姆巴佩、登贝莱、奥利塞（法国）；亚马尔、奥亚萨瓦尔、罗德里（西班牙）",
       "recent_form": "法国本届6战6胜进16失2；西班牙本届6战5胜1平进11失1，近两次大赛淘汰赛均击败法国",
       "stay_up_index": 5,
-      "one_liner": "半决赛前最终诊断：五人分歧严重，法国小热但中轴伤停+近年克星西班牙，90分钟僵局概率高"
+      "one_liner": "半决赛前最终诊断：五人分歧严重，法国小热但中轴伤停+近年克星西班牙，90分钟僵局概率高",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "miss",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
     },
     {
       "date": "2026-07-15",
       "home": "英格兰",
       "away": "阿根廷",
+      "score": "1-2",
       "group": "半决赛",
       "beijing_time": "07/16 03:00",
       "beijing_date": "2026-07-16",
-      "status": "scheduled",
-      "source": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
+      "status": "finished",
+      "source": "https://english.news.cn/20260716/76df4b9dd9e34765bcfc2d598ee6e8a5/c.html（Gordon 55'（Rogers助攻）、Enzo Fernández 85'（梅西助攻）、Lautaro Martínez 90+2'（梅西助攻）；另见 AP https://abcnews.com/Sports/wireStory/england-protect-late-lead-world-cup-messi-argentina-134799038）",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3668,7 +3682,75 @@
       "key_players": "凯恩、贝林厄姆（英格兰）；梅西、阿尔瓦雷斯、恩佐（阿根廷）",
       "recent_form": "英格兰本届6战4胜1平1负进13失6，连续3场淘汰赛苦战；阿根廷本届6战6胜进17失5，连续3场淘汰赛被拖入加时/落后逆转",
       "stay_up_index": 5,
-      "one_liner": "梅西最后一舞 vs 三狮军团：两队都踢满120分钟，体能与巨星时刻决定决赛门票"
+      "one_liner": "梅西最后一舞 vs 三狮军团：两队都踢满120分钟，体能与巨星时刻决定决赛门票",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "miss",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
+    },
+    {
+      "date": "2026-07-18",
+      "home": "法国",
+      "away": "英格兰",
+      "group": "季军战",
+      "beijing_time": "07/19 05:00",
+      "beijing_date": "2026-07-19",
+      "status": "scheduled",
+      "source": "https://fiido.com/blogs/news/2026-world-cup-schedule-07-15（7/18 17:00 ET，迈阿密 Hard Rock Stadium）",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "主队胜",
+            "风险官": "客队胜"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "待确认（截至 7/16 未检索到公开单场概率/赔率）",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "2-1（四票看法国小胜，风险官反押英格兰 1-2；季军战近六届 90 分钟无平局、场均约 3 球）",
+      "key_players": "姆巴佩、登贝莱（法国）；凯恩、贝林厄姆（英格兰）",
+      "recent_form": "法国半决赛 0-2 完败西班牙（xG 0.31），此前 6 战全胜进 16 失 2；英格兰淘汰赛四连苦战，半决赛 1-2 被阿根廷 90+2' 逆转",
+      "stay_up_index": 4,
+      "one_liner": "心碎者联盟：姆巴佩刷金靴+德尚告别战 vs 图赫尔挨骂后的纠错之战"
+    },
+    {
+      "date": "2026-07-19",
+      "home": "西班牙",
+      "away": "阿根廷",
+      "group": "决赛",
+      "beijing_time": "07/20 03:00",
+      "beijing_date": "2026-07-20",
+      "status": "scheduled",
+      "source": "https://fiido.com/blogs/news/2026-world-cup-schedule-07-15（7/19 15:00 ET，新泽西 MetLife Stadium）",
+      "predictions": {
+        "my_swarm": {
+          "votes": {
+            "数据": "主队胜",
+            "战术": "主队胜",
+            "伤病": "主队胜",
+            "舆情": "平",
+            "风险官": "平"
+          },
+          "final": "主队胜",
+          "split": true
+        },
+        "opta": "西班牙捧杯 56.15%（Opta 超算，风险官引述）；市场90分钟隐含 西班牙 41-44% / 平 33-35% / 阿根廷 26-28%（Skybet，数据分析师引述）",
+        "kimi_official": "待确认",
+        "coin_flip": "客队胜"
+      },
+      "score_pred": "1-0 / 2-1（三票看西班牙小胜，舆情/风险官看 1-1；近五届决赛四届 90 分钟打平，加时/点球尾部 35%+）",
+      "key_players": "亚马尔、罗德里、奥亚萨瓦尔（西班牙）；梅西、阿尔瓦雷斯、恩佐·费尔南德斯（阿根廷）",
+      "recent_form": "西班牙本届 7 场仅失 1 球、5 场零封，半决赛 2-0 法国；阿根廷 7 战全胜进 19 球，但连续四场靠补时/加时获胜，半决赛 2-1 英格兰",
+      "stay_up_index": 5,
+      "one_liner": "梅西最后一舞 vs 亚马尔新王登基：体系压制的无敌舰队 vs 四连绝杀的天命之师"
     }
   ]
 }
