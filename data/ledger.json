@@ -12,20 +12,20 @@
   },
   "tally": {
     "my_swarm": {
-      "hit": 74,
-      "miss": 21
+      "hit": 75,
+      "miss": 22
     },
     "kimi_official": {
       "hit": 0,
       "miss": 0
     },
     "opta": {
-      "hit": 42,
+      "hit": 43,
       "miss": 11
     },
     "coin_flip": {
-      "hit": 38,
-      "miss": 55
+      "hit": 39,
+      "miss": 56
     }
   },
   "token_account": {
@@ -155,6 +155,12 @@
         "match": "法国 vs 西班牙",
         "team": "西班牙不败（平局/客胜）",
         "status": "hit"
+      },
+      {
+        "date": "2026-07-16",
+        "match": "西班牙 vs 阿根廷（决赛）",
+        "team": "西班牙（90分钟不败/捧杯）",
+        "status": "hit"
       }
     ],
     "tokens_earned": 0,
@@ -164,7 +170,7 @@
       "date": "2026-07-16",
       "match": "西班牙 vs 阿根廷（决赛，北京 07/20 03:00）",
       "team": "西班牙（90分钟不败/捧杯）",
-      "status": "pending"
+      "status": "hit（西班牙加时 1-0 捧杯，90 分钟 0-0 不败，两个口径均命中；世界杯已落幕，Token Cup 收官）"
     }
   },
   "matches": [
@@ -3697,8 +3703,9 @@
       "group": "季军战",
       "beijing_time": "07/19 05:00",
       "beijing_date": "2026-07-19",
-      "status": "scheduled",
-      "source": "https://fiido.com/blogs/news/2026-world-cup-schedule-07-15（7/18 17:00 ET，迈阿密 Hard Rock Stadium）",
+      "status": "finished",
+      "score": "4-6",
+      "source": "https://www.espn.com/soccer/match/_/gameId/760516/england-france（England beat France 6-4；Rice 3'、Konsa 18'、Saka 帽子戏法含点球、Bellingham 98'；法国 Mbappé 两球、Barcola、Dembélé；半场英格兰 4-0）",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3719,7 +3726,13 @@
       "key_players": "姆巴佩、登贝莱（法国）；凯恩、贝林厄姆（英格兰）",
       "recent_form": "法国半决赛 0-2 完败西班牙（xG 0.31），此前 6 战全胜进 16 失 2；英格兰淘汰赛四连苦战，半决赛 1-2 被阿根廷 90+2' 逆转",
       "stay_up_index": 4,
-      "one_liner": "心碎者联盟：姆巴佩刷金靴+德尚告别战 vs 图赫尔挨骂后的纠错之战"
+      "one_liner": "心碎者联盟：姆巴佩刷金靴+德尚告别战 vs 图赫尔挨骂后的纠错之战",
+      "result_check": {
+        "my_swarm": "miss",
+        "opta": "n/a",
+        "kimi_official": "n/a",
+        "coin_flip": "hit"
+      }
     },
     {
       "date": "2026-07-19",
@@ -3728,8 +3741,9 @@
       "group": "决赛",
       "beijing_time": "07/20 03:00",
       "beijing_date": "2026-07-20",
-      "status": "scheduled",
-      "source": "https://fiido.com/blogs/news/2026-world-cup-schedule-07-15（7/19 15:00 ET，新泽西 MetLife Stadium）",
+      "status": "finished",
+      "score": "1-0（AET，90分钟0-0）",
+      "source": "https://apnews.com/article/argentina-spain-world-cup-final-score-messi-fccc26aa12d9226e63d06b601b770617（Ferran Torres 106' 替补绝杀，Nico Williams 助攻；Enzo Fernández 90+' 两黄变红；E. Martínez 10 次扑救创决赛纪录；西班牙 8 场仅失 1 球创冠军最少失球纪录；Rodri 金球奖；另见 https://www.foxsports.com/live-blog/soccer/world-cup-final-spain-argentina-live-updates-score-highlights）",
       "predictions": {
         "my_swarm": {
           "votes": {
@@ -3750,7 +3764,13 @@
       "key_players": "亚马尔、罗德里、奥亚萨瓦尔（西班牙）；梅西、阿尔瓦雷斯、恩佐·费尔南德斯（阿根廷）",
       "recent_form": "西班牙本届 7 场仅失 1 球、5 场零封，半决赛 2-0 法国；阿根廷 7 战全胜进 19 球，但连续四场靠补时/加时获胜，半决赛 2-1 英格兰",
       "stay_up_index": 5,
-      "one_liner": "梅西最后一舞 vs 亚马尔新王登基：体系压制的无敌舰队 vs 四连绝杀的天命之师"
+      "one_liner": "梅西最后一舞 vs 亚马尔新王登基：体系压制的无敌舰队 vs 四连绝杀的天命之师",
+      "result_check": {
+        "my_swarm": "hit（按最终胜负口径；90 分钟 0-0 平，舆情/风险官单人票在 90 分钟口径命中）",
+        "opta": "hit（西班牙捧杯 56.15% 应验）",
+        "kimi_official": "n/a",
+        "coin_flip": "miss"
+      }
     }
   ]
 }

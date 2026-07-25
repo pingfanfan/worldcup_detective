@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界杯 AI 球探日报</title>
+<style>
+  :root{
+    --bg:#080c11; --card:#111922; --card2:#0e151d; --line:#1d2935; --ink:#e9f0f7;
+    --muted:#7d8b9c; --accent:#22d3a8; --accent2:#3ba3ff;
+    --warn:#ffb454; --danger:#ff5d6c; --win:#22d3a8; --draw:#8b95a3; --lose:#ff7a45;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(1200px 600px at 50% -10%,#0e1a16 0%,var(--bg) 55%);
+    color:var(--ink);font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    line-height:1.55;padding:22px;max-width:600px;margin:0 auto}
+
+  .top{display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:16px}
+  .top h1{font-size:21px;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+  .top .tag{font-size:10px;color:var(--accent);border:1px solid var(--accent);
+    border-radius:4px;padding:1px 6px;font-weight:600}
+  .top .meta{color:var(--muted);font-size:12px;text-align:right}
+
+  .scoreboard{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px}
+  .sb{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 6px;text-align:center}
+  .sb.lead{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+  .sb .who{font-size:10.5px;color:var(--muted);margin-bottom:3px}
+  .sb .rec{font-size:15px;font-weight:800}
+  .sb .rate{font-size:10.5px;color:var(--accent)}
+  .ticker{font-size:11px;color:var(--muted);text-align:center;margin-bottom:18px}
+
+  h2{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;
+    margin:22px 0 10px;display:flex;align-items:center;gap:8px}
+  h2::before{content:"";width:3px;height:13px;background:var(--accent);border-radius:2px}
+
+  .recap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .recap .row{display:flex;justify-content:space-between;padding:9px 13px;border-bottom:1px solid var(--line);font-size:13.5px}
+  .recap .row:last-child{border-bottom:none}
+  .recap .sc{font-variant-numeric:tabular-nums;color:#cdd9e5}
+  .hit{color:var(--win)} .miss{color:var(--danger)}
+
+  .match{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
+    border-radius:13px;padding:14px;margin-bottom:11px}
+  .match .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .match .vs{font-size:16px;font-weight:800}
+  .match .grp{font-size:10px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 5px;margin-left:6px}
+  .match .time{font-size:12px;color:var(--accent2);font-variant-numeric:tabular-nums}
+  .match .stat{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:#bcc9d6;margin:4px 0 8px}
+  .match .stat b{color:var(--ink)}
+  .match .take{font-size:12.5px;color:#cdd9e5;border-left:2px solid var(--accent);padding-left:8px;margin-top:6px}
+
+  .votes{display:flex;gap:4px;margin-top:9px}
+  .vote{flex:1;text-align:center;font-size:9.5px;border-radius:6px;padding:5px 2px;border:1px solid var(--line)}
+  .vote .r{color:var(--muted);display:block;font-size:9px;margin-bottom:2px}
+  .vote .v{font-weight:700}
+  .vote.win{background:rgba(34,211,168,.12);border-color:rgba(34,211,168,.4)}
+  .vote.win .v{color:var(--win)}
+  .vote.draw{background:rgba(139,149,163,.12)} .vote.draw .v{color:var(--draw)}
+  .vote.lose{background:rgba(255,122,69,.12);border-color:rgba(255,122,69,.35)} .vote.lose .v{color:var(--lose)}
+  .split{font-size:10px;color:var(--warn);margin-top:6px}
+
+  .panel{background:#0c1712;border:1px solid #1b3a2c;border-radius:12px;padding:13px;margin-bottom:11px}
+  .panel .role{display:flex;gap:9px;font-size:12.5px;margin:7px 0;align-items:baseline}
+  .panel .role b{color:var(--accent);min-width:74px;display:inline-block;flex-shrink:0}
+  .panel .role span{color:#cdd9e5}
+
+  .vision{background:var(--card);border:1px dashed var(--accent2);border-radius:12px;padding:13px;margin-bottom:11px;font-size:12.5px;color:#cdd9e5}
+  .vision .lab{color:var(--accent2);font-weight:700;margin-bottom:5px;font-size:11px}
+
+  .pick{background:linear-gradient(135deg,#11241d,#0e2a33);border:1px solid var(--accent);
+    border-radius:13px;padding:16px;text-align:center;margin:8px 0}
+  .pick .label{font-size:11px;color:var(--muted)}
+  .pick .team{font-size:24px;font-weight:800;color:var(--accent);margin:4px 0}
+  .pick .why{font-size:12px;color:#cdd9e5}
+
+  footer{margin-top:24px;padding-top:14px;border-top:1px solid var(--line);
+    font-size:10.5px;color:var(--muted);text-align:center;line-height:1.9}
+  footer .disc{color:#5f6c7b}
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+
+  <div class="top">
+    <h1>⚽ AI 球探日报 <span class="tag">KIMI CODE 自动生成</span></h1>
+    <div class="meta">第 32 期 · 终局篇<br>07月25日</div>
+  </div>
+
+  <div class="scoreboard">
+    <div class="sb "><div class="who">我的小分队</div><div class="rec">75胜22负</div><div class="rate">77.3%</div></div>
+    <div class="sb "><div class="who">Kimi官方</div><div class="rec">0胜0负</div><div class="rate">N/A</div></div>
+    <div class="sb lead"><div class="who">Opta超算</div><div class="rec">43胜11负</div><div class="rate">79.6%</div></div>
+    <div class="sb"><div class="who">抛硬币</div><div class="rec">39胜56负</div><div class="rate">41.1%</div></div>
+  </div>
+  <div class="ticker">终账 · 西班牙 1-0 阿根廷（AET）捧起 2026 世界杯 · 104 场全部核验完毕 · Opta 79.6% 小幅领跑收官</div>
+
+  <h2>赛果核验（季军战 + 决赛）</h2>
+  <div class="recap">
+    <div class="row"><span class="sc">法国 4-6 英格兰（Saka 帽子戏法、Bellingham 98'）</span><span class="miss">小分队 ❌ · 硬币 ✅</span></div>
+    <div class="row"><span class="sc">西班牙 1-0 阿根廷（AET，Ferran Torres 106'）</span><span class="hit">小分队 ✅ · Opta ✅ · 硬币 ❌</span></div>
+    <div class="row"><span class="sc" style="color:var(--muted);font-size:12px">注：决赛 90 分钟 0-0，舆情/风险官的平局单人票在 90 分钟口径命中；季军战风险官反押英格兰 ✅</span><span></span></div>
+  </div>
+
+  <h2>今日焦点 · 北京时间</h2>
+  <div class="match"><div class="take" style="border-left-color:var(--accent2)">今天无比赛——2026 世界杯已于 7/19 落幕。本期为<b>终局复盘</b>：五人会诊改为五个视角的赛事总结，下方两张卡片回放最后两场比赛的赛前投票与最终结果。</div></div>
+
+  <div class="match">
+    <div class="head">
+      <span class="vs">西班牙 1-0 阿根廷<span class="grp">🏆 决赛 · AET</span></span>
+      <span class="time">07/20 03:00</span>
+    </div>
+    <div class="stat">
+      <span>最终 <b>1-0（106' Torres）</b></span>
+      <span>预测 <b>1-0 / 2-1 ✅</b></span>
+      <span>关键 <b>Rodri 金球 / 梅西谢幕</b></span>
+    </div>
+    <div class="take">体系压制的终极裁决：西班牙 8 场仅失 1 球创冠军最少失球纪录，让阿根廷常规时间 0 射门；但破密集同样要靠 Enzo 红牌 + 替补绝杀，大马丁 10 扑救创决赛纪录。方向、比分、加时尾部三条全部应验。</div>
+    <div class="votes">
+      <div class="vote win"><span class="r">数据</span><span class="v">西✅</span></div>
+      <div class="vote win"><span class="r">战术</span><span class="v">西✅</span></div>
+      <div class="vote win"><span class="r">伤病</span><span class="v">西✅</span></div>
+      <div class="vote draw"><span class="r">舆情</span><span class="v">平✅*</span></div>
+      <div class="vote draw"><span class="r">风险官</span><span class="v">平✅*</span></div>
+    </div>
+    <div class="split">* 90 分钟 0-0，平局单人票按 90 分钟口径命中；多数票"西班牙胜"按最终胜负口径命中</div>
+  </div>
+
+  <div class="match">
+    <div class="head">
+      <span class="vs">法国 4-6 英格兰<span class="grp">🥉 季军战</span></span>
+      <span class="time">07/19 05:00</span>
+    </div>
+    <div class="stat">
+      <span>最终 <b>4-6（半场 0-4）</b></span>
+      <span>预测 <b>2-1 法国 ❌</b></span>
+      <span>关键 <b>Saka 戴帽 / Mbappé 两球破纪录</b></span>
+    </div>
+    <div class="take">"心碎程度"定价错误：被 90+2' 绝杀的英格兰化悲愤为火力，0-2 完败的法国才是士气崩盘方。10 球创季军战进球纪录——明知"场均 3 球"却仍押 2-1 小胜，保守逻辑用错了赛场。风险官反押英格兰 ✅，连续三场单人命中。</div>
+    <div class="votes">
+      <div class="vote lose"><span class="r">数据</span><span class="v">法❌</span></div>
+      <div class="vote lose"><span class="r">战术</span><span class="v">法❌</span></div>
+      <div class="vote lose"><span class="r">伤病</span><span class="v">法❌</span></div>
+      <div class="vote lose"><span class="r">舆情</span><span class="v">法❌</span></div>
+      <div class="vote win"><span class="r">风险官</span><span class="v">英✅</span></div>
+    </div>
+    <div class="split">⚠ 赛前有分歧：风险官独票反押英格兰并命中</div>
+  </div>
+
+  <h2>五人会诊摘要 · 终局复盘</h2>
+  <div class="panel">
+    <div class="role"><b>数据分析师</b><span>西班牙的统治是可量化的：8 战全胜失 1 球、7 场零封、xG 被进球全赛事最低；四强失球数与名次严格负相关（西1/阿8/法10/英12）。阿根廷"四连补时/加时绝杀"是历史首见的数据模式而非叙事。终账诚实对账：Opta 79.6% 实际略高于小分队 77.3%，胜场优势部分来自样本量。</span></div>
+    <div class="role"><b>战术分析师</b><span>决赛是"体系压制 vs 巨星时刻"的终极裁决：西班牙让阿根廷常规时间 0 射门（1966 年有统计以来决赛首次），但自己 90 分钟也颗粒无收——破密集乏力对冠军同样成立。本届战术三铁律：体系 &gt; 巨星、门将是单场决胜最大单一变量、领先后的策略选择比领先本身更决定胜负。</span></div>
+    <div class="role"><b>伤病观察员</b><span>"出席≠状态"决定了半决赛与决赛成色：法国中轴名单全员可战、实际 xG 0.31 完败；阿根廷成为史上首支单届三进加时的球队，Enzo 补时红牌（2010 年以来决赛首张）本质是透支后的纪律崩盘。健康阵容 + 90 分钟快速解决战斗，是本届冠军方程式的核心。</span></div>
+    <div class="role"><b>舆情嘴替</b><span>情绪端完败于体系端：梅西落泪谢幕冲爆热搜，但全场仅 54 次触球；Kalshi 赛前给梅西 89% 金球概率，结果 Rodri 拿金球、库巴西拿最佳新秀，预测市场与流量叙事双输。世界杯完成"超级碗化"（首个决赛中场秀 + 特朗普现场颁奖）；阿根廷赛后冲突被德拉富恩特定性"不可接受"，"天命之师"一夜变"恼羞成怒"。</span></div>
+    <div class="role"><b>风险官</b><span>泼冷水：小分队赢了硬币但没赢 Opta（79.6% vs 77.3%，样本不同、差距不显著），"击败超算"的庆功叙事经不起推敲。我押的宏观叙事"大热必死"也被西班牙亲手证伪——头号热门 8 场失 1 球不败夺冠。"伤病+风险官一致反向应推翻多数票"两次写入错题本却从未落地，半决赛双错就是代价，下届必须升级为硬机制。</span></div>
+  </div>
+
+  <h2>📷 今日读图</h2>
+  <div class="vision">
+    <div class="lab">视觉理解（Kimi 模型本体能力）</div>
+    今天投喂的是 <b>assets/世界杯赛程截图.png</b>——ESPN 官网赛程页长截图，定格在小组赛第一周（6/17 周三）。图中可见当日三场 FT 比分（阿根廷 3-0 阿尔及利亚、奥地利 3-1 约旦、葡萄牙 1-1 刚果金）及 6/18–6/23 赛程，与账本已核验赛果<b>完全一致</b> ✅。这是赛事早期的历史存档图：图中"未来赛程"里的西班牙首秀（6/21 v 沙特），最终一路走到 7/19 捧杯。一张截图，恍如隔世。详见 data/swarm/视觉分析.md。
+  </div>
+
+  <h2>今日建议站队</h2>
+  <div class="pick">
+    <div class="label">Kimi Token Cup · 已收官</div>
+    <div class="team">西班牙 ✅ 捧杯</div>
+    <div class="why">决赛站队"西班牙 90 分钟不败/捧杯"两个口径双中（90 分钟 0-0 不败 + 加时 1-0 夺冠）。Token Cup 全期 22 次站队 19 中 3 错收官，下一届再见。</div>
+  </div>
+
+  <footer>
+    数据更新：2026-07-25 · 各场来源已在 ledger.json 留痕<br>
+    <span class="disc">仅供娱乐与 AI 能力测评，不构成任何投注建议。</span><br>
+    由 Kimi Code 自动生成 · <a href="https://kimi.com/code">kimi.com/code</a>
+  </footer>
+
+</body>
+</html>
