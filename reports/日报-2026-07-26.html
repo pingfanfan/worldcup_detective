@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界杯 AI 球探日报</title>
+<style>
+  :root{
+    --bg:#080c11; --card:#111922; --card2:#0e151d; --line:#1d2935; --ink:#e9f0f7;
+    --muted:#7d8b9c; --accent:#22d3a8; --accent2:#3ba3ff;
+    --warn:#ffb454; --danger:#ff5d6c; --win:#22d3a8; --draw:#8b95a3; --lose:#ff7a45;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(1200px 600px at 50% -10%,#0e1a16 0%,var(--bg) 55%);
+    color:var(--ink);font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    line-height:1.55;padding:22px;max-width:600px;margin:0 auto}
+
+  .top{display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:16px}
+  .top h1{font-size:21px;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+  .top .tag{font-size:10px;color:var(--accent);border:1px solid var(--accent);
+    border-radius:4px;padding:1px 6px;font-weight:600}
+  .top .meta{color:var(--muted);font-size:12px;text-align:right}
+
+  .scoreboard{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px}
+  .sb{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 6px;text-align:center}
+  .sb.lead{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+  .sb .who{font-size:10.5px;color:var(--muted);margin-bottom:3px}
+  .sb .rec{font-size:15px;font-weight:800}
+  .sb .rate{font-size:10.5px;color:var(--accent)}
+  .ticker{font-size:11px;color:var(--muted);text-align:center;margin-bottom:18px}
+
+  h2{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;
+    margin:22px 0 10px;display:flex;align-items:center;gap:8px}
+  h2::before{content:"";width:3px;height:13px;background:var(--accent);border-radius:2px}
+
+  .recap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .recap .row{display:flex;justify-content:space-between;padding:9px 13px;border-bottom:1px solid var(--line);font-size:13.5px}
+  .recap .row:last-child{border-bottom:none}
+  .recap .sc{font-variant-numeric:tabular-nums;color:#cdd9e5}
+  .hit{color:var(--win)} .miss{color:var(--danger)}
+
+  .match{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
+    border-radius:13px;padding:14px;margin-bottom:11px}
+  .match .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .match .vs{font-size:16px;font-weight:800}
+  .match .grp{font-size:10px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 5px;margin-left:6px}
+  .match .time{font-size:12px;color:var(--accent2);font-variant-numeric:tabular-nums}
+  .match .stat{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:#bcc9d6;margin:4px 0 8px}
+  .match .stat b{color:var(--ink)}
+  .match .take{font-size:12.5px;color:#cdd9e5;border-left:2px solid var(--accent);padding-left:8px;margin-top:6px}
+
+  .panel{background:#0c1712;border:1px solid #1b3a2c;border-radius:12px;padding:13px;margin-bottom:11px}
+  .panel .role{display:flex;gap:9px;font-size:12.5px;margin:7px 0;align-items:baseline}
+  .panel .role b{color:var(--accent);min-width:74px;display:inline-block;flex-shrink:0}
+  .panel .role span{color:#cdd9e5}
+
+  .vision{background:var(--card);border:1px dashed var(--accent2);border-radius:12px;padding:13px;margin-bottom:11px;font-size:12.5px;color:#cdd9e5}
+  .vision .lab{color:var(--accent2);font-weight:700;margin-bottom:5px;font-size:11px}
+
+  .pick{background:linear-gradient(135deg,#11241d,#0e2a33);border:1px solid var(--accent);
+    border-radius:13px;padding:16px;text-align:center;margin:8px 0}
+  .pick .label{font-size:11px;color:var(--muted)}
+  .pick .team{font-size:24px;font-weight:800;color:var(--accent);margin:4px 0}
+  .pick .why{font-size:12px;color:#cdd9e5}
+
+  footer{margin-top:24px;padding-top:14px;border-top:1px solid var(--line);
+    font-size:10.5px;color:var(--muted);text-align:center;line-height:1.9}
+  footer .disc{color:#5f6c7b}
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+
+  <div class="top">
+    <h1>⚽ AI 球探日报 <span class="tag">KIMI CODE 自动生成</span></h1>
+    <div class="meta">第 33 期 · 休赛日<br>07月26日</div>
+  </div>
+
+  <div class="scoreboard">
+    <div class="sb "><div class="who">我的小分队</div><div class="rec">75胜22负</div><div class="rate">77.3%</div></div>
+    <div class="sb "><div class="who">Kimi官方</div><div class="rec">0胜0负</div><div class="rate">N/A</div></div>
+    <div class="sb lead"><div class="who">Opta超算</div><div class="rec">43胜11负</div><div class="rate">79.6%</div></div>
+    <div class="sb"><div class="who">抛硬币</div><div class="rec">39胜56负</div><div class="rate">41.1%</div></div>
+  </div>
+  <div class="ticker">休赛日 · 世界杯落幕整一周 · 终账冻结 · 五人 Swarm 转赛后复盘刊物（全文见 data/swarm/）</div>
+
+  <h2>昨夜复盘</h2>
+  <div class="recap">
+    <div class="row"><span class="sc">昨夜无比赛——世界杯已于 7/19 收官，104 场全部核验完毕</span><span class="hit">无需对账 ✅</span></div>
+    <div class="row"><span class="sc" style="color:var(--muted);font-size:12px">赛程核验：FIFA 官网确认决赛（7/19 西班牙 1-0 阿根廷）为本届最后一场，7/25–7/26 无任何赛程（fifa.com/match-centre）</span><span></span></div>
+  </div>
+
+  <h2>今日焦点 · 休赛期动态</h2>
+  <div class="match"><div class="take" style="border-left-color:var(--accent2)">今天无比赛，五人会诊不投票、无比分预测。本期改为<b>休赛期情报卡</b>：五人各自联网取证赛后一周的关键动态。</div></div>
+
+  <div class="match">
+    <div class="head">
+      <span class="vs">梅西退役悬念<span class="grp">舆情</span></span>
+      <span class="time">持续发酵</span>
+    </div>
+    <div class="stat">
+      <span>AIPS 全球 472 名记者票选本届最佳 <b>梅西</b></span>
+      <span>官方金球 <b>Rodri</b></span>
+      <span>官宣状态 <b>待确认</b></span>
+    </div>
+    <div class="take">梅西只发"痛苦巨大、祝贺西班牙"的告别式长文却不官宣；2016 年有退队两月即反悔的前科，没人敢押死。2030 本土作战（43 岁）是"复出说"最后的火种。</div>
+  </div>
+
+  <div class="match">
+    <div class="head">
+      <span class="vs">决赛群殴入纪律程序<span class="grp">FIFA</span></span>
+      <span class="time">判决待确认</span>
+    </div>
+    <div class="stat">
+      <span>被立案 <b>帕雷德斯 / 莫利纳 / 助教阿亚拉</b></span>
+      <span>转播"红牌" <b>系统误报，已删除</b></span>
+    </div>
+    <div class="take">赛后冲突进入 FIFA 纪律程序，半决赛"马岛横幅"一并被查；德拉富恩特定性"不可接受"，"天命之师"一夜变"恼羞成怒"。</div>
+  </div>
+
+  <div class="match">
+    <div class="head">
+      <span class="vs">新赛季伤员回归窗口<span class="grp">队医</span></span>
+      <span class="time">8 月开赛</span>
+    </div>
+    <div class="stat">
+      <span>利马大腿伤 <b>扫描待确认</b></span>
+      <span>内马尔 <b>7/26 巴甲复出</b></span>
+      <span>姆巴佩脚踝 <b>定性轻微</b></span>
+    </div>
+    <div class="take">"出席≠状态"的后续验证窗口：利马伤情可能影响曼联开局及马竞求购；萨拉赫已确定离开利物浦。"可战≠满血"这条错题本信号，将在俱乐部赛季继续接受检验。</div>
+  </div>
+
+  <div class="match">
+    <div class="head">
+      <span class="vs">2030 世界杯定档<span class="grp">下一届</span></span>
+      <span class="time">2030/06/08–07/21</span>
+    </div>
+    <div class="stat">
+      <span>主办 <b>西班牙 / 葡萄牙 / 摩洛哥</b></span>
+      <span>百年纪念赛 <b>南美三国</b></span>
+      <span>赛制 <b>48 队 · 104 场</b></span>
+    </div>
+    <div class="take">六国三洲、44 天碎片化赛程——风险官提前泼冷水：旅行/气候将比 xG 更硬，"体系压制=确定性"的模板过热本身会成为新的翻车源。</div>
+  </div>
+
+  <h2>五人会诊摘要 · 休赛日特刊</h2>
+  <div class="panel">
+    <div class="role"><b>数据分析师</b><span>终账统计学解读：小分队 77.3%（97 场）vs Opta 79.6%（54 场），两比例 z 检验 z≈0.33、p≈0.74，<b>差距完全不显著</b>——"输给超算"和"击败超算"两种叙事都不成立；但两者相对抛硬币 41.1% 均为 p&lt;0.001 压倒性优势，AI 超额能力真实。另核验：姆巴佩 10 球蝉联金靴（历史首人）、22 球登顶世界杯历史射手王。</span></div>
+    <div class="role"><b>战术分析师</b><span>西班牙 8 场失 1 球不是防线功劳，而是从丢球点围抢开始的五层结构；决赛让阿根廷 90 分钟零射门，关键在封死两线间的接球口袋而非盯人。斯卡洛尼的防守结构其实合格（10 人靠大马丁 10 扑救撑到加时），输的是进攻通路。制胜球来自板凳（费兰·托雷斯 106'）——体系队的杀招在替补席。</span></div>
+    <div class="role"><b>伤病观察员</b><span>"出席≠状态"是全届主线：姆巴佩带踝伤首发→法国半决赛 xG 0.31；恩佐 7 场全勤后 90+3' 染红（2010 年以来决赛首红），本质是连续加时透支后的纪律崩盘。阿根廷作为史上首支单届三进加时的球队，决赛常规时间 0 射门——油箱在新泽西彻底见底。</span></div>
+    <div class="role"><b>舆情嘴替</b><span>眼泪赢了流量，体系赢了奖杯：AIPS 记者票选梅西为本届最佳，官方金球归 Rodri。帅位交接渐明——斯卡洛尼发布会落泪离场，但赛前已口头同意续约至 2031；姆巴佩 22 球登顶历史射手王，"梅罗时代"账本正式翻页。</span></div>
+    <div class="role"><b>风险官</b><span>"大热必死"被西班牙亲手证伪（8 场失 1 球不败夺冠），下届无脑复用翻车概率 ≥60%。"伤病+风险官一致反向应推翻多数票"两次写入错题本从未落地，半决赛双错就是代价——已给出硬规则草案：双票反向且各有 ≥2 条可核验论据时直接采纳反向，禁止折中为平。</span></div>
+  </div>
+
+  <h2>📷 今日读图</h2>
+  <div class="vision">
+    <div class="lab">视觉理解（Kimi 模型本体能力）</div>
+    今天没有投喂新图——assets/ 里仍是 6/17 的旧赛程截图（上期已读图留痕，见 data/swarm/视觉分析.md）。休赛期若有决赛现场图、捧杯海报、转会官宣截图等，欢迎拖进 assets/，下期读给你看。
+  </div>
+
+  <h2>今日建议站队</h2>
+  <div class="pick">
+    <div class="label">Kimi Token Cup · 已收官</div>
+    <div class="team">休赛日 · 不站队</div>
+    <div class="why">Token Cup 全期 22 次站队 19 中 3 错收官（决赛站队西班牙双口径命中）。休赛期无比赛不投票，账本终账冻结——2030 西葡摩世界杯，下一届见。</div>
+  </div>
+
+  <footer>
+    数据更新：2026-07-26 · 各场来源已在 ledger.json 留痕<br>
+    <span class="disc">仅供娱乐与 AI 能力测评，不构成任何投注建议。</span><br>
+    由 Kimi Code 自动生成 · <a href="https://kimi.com/code">kimi.com/code</a>
+  </footer>
+
+</body>
+</html>
