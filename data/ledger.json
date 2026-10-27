@@ -4,7 +4,7 @@
     "created": "2026-06-14",
     "note": "四方对赌：我的小分队 / Kimi官方300Agent / Opta超算 / 抛硬币。仅供娱乐与AI能力测评，不构成投注建议。",
     "season_status": "closed（2026-07-19 决赛收官，西班牙 1-0 阿根廷 AET 捧杯；104 场全部核验完毕）",
-    "last_updated": "2026-10-24（第35期·休赛日：无国家队比赛，俱乐部赛季进行中，tally 终账冻结；五人 Swarm 休赛日特刊⑥更新，见 data/swarm/）",
+    "last_updated": "2026-10-27（第36期·休赛日：无国家队比赛，tally 终账冻结；上期挂账核销——10/25 国家德比巴萨1-2皇马（姆巴佩41'/87'双响，来源 espn.com/soccer/match/_/gameId/401882832）、10/26 金球奖凯恩获奖（上期'凯恩翻车~38%'未应验，'亚马尔泄露获奖'证伪，来源 espn.com/soccer/story/_/id/50259091）；五人 Swarm 休赛日特刊⑦更新，见 data/swarm/）",
     "columns": [
       "my_swarm",
       "kimi_official",
